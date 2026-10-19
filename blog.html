@@ -1,0 +1,621 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>不動産売却のコラム｜福岡市の株式会社OLD wide</title>
+<meta name="description" content="福岡市で不動産を売るときのお金・税金・手続き・エリア情報を、OLD wideの担当者が分かりやすく書いています。">
+<link rel="canonical" href="https://www.oldwide.jp/blog.html">
+<meta property="og:title" content="不動産売却のコラム｜福岡市の株式会社OLD wide">
+<meta property="og:description" content="福岡市で不動産を売るときのお金・税金・手続き・エリア情報を、OLD wideの担当者が分かりやすく書いています。">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://www.oldwide.jp/blog.html">
+<meta property="og:locale" content="ja_JP">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@500;700;900&family=Noto+Sans+JP:wght@400;500;700&display=swap">
+<style>
+/* Layout: 白と空色の帯を交互に。相談ボタン（橙）と電話番号を各所にくり返し、スマホは下部固定バー */
+:root{
+  --white:#ffffff; --sky:#eaf4fb; --sky2:#d5e9f7; --blue:#1f6fb8; --blue-d:#164f86;
+  --navy:#1b2c48; --text:#2b3445; --sub:#5d6778; --line:#dbe3ec;
+  --orange:#ef7d1a; --orange-d:#d96b0c; --yellow:#fff4d6; --green:#06c755;
+  --f-head:"Zen Maru Gothic","Hiragino Maru Gothic ProN","Yu Gothic",sans-serif;
+  --f-body:"Noto Sans JP","Hiragino Kaku Gothic ProN","Yu Gothic",sans-serif;
+  color-scheme:light;
+}
+*{box-sizing:border-box}
+html{background:var(--white)}
+body{background:var(--white);color:var(--text);font-family:var(--f-body);font-size:16px;line-height:1.9;letter-spacing:.02em}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:10;background:var(--white)}
+a{color:var(--blue)}
+h1,h2,h3{font-family:var(--f-head);color:var(--navy);line-height:1.45;margin:0;text-wrap:balance}
+p{margin:0}
+img,svg{max-width:100%}
+.wrap{max-width:1100px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+.sec{padding-block:clamp(56px,8vw,88px)}
+.sec.sky{background:var(--sky)}
+.ttl{text-align:center;margin-bottom:40px;display:grid;gap:8px;justify-items:center}
+.ttl .en{font-family:var(--f-head);font-weight:700;color:var(--blue);font-size:14px;letter-spacing:.12em}
+.ttl h2{font-size:clamp(24px,3.6vw,34px);font-weight:900}
+.ttl h2 .mk{background:linear-gradient(transparent 62%,var(--yellow) 62%)}
+.ttl p{color:var(--sub);max-width:640px}
+:focus-visible{outline:3px solid var(--orange);outline-offset:2px}
+.tnum{font-variant-numeric:tabular-nums}
+
+/* buttons */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;font-family:var(--f-head);font-weight:700;font-size:17px;border:0;border-radius:999px;padding:15px 30px;text-decoration:none;cursor:pointer;line-height:1.3;transition:transform .15s,box-shadow .15s}
+.btn:hover{transform:translateY(-2px)}
+.btn-o{background:var(--orange);color:#fff;box-shadow:0 4px 0 var(--orange-d)}
+.btn-o:hover{box-shadow:0 6px 0 var(--orange-d)}
+.btn-line{background:var(--green);color:#fff;box-shadow:0 4px 0 #05a648}
+.btn-w{background:#fff;color:var(--blue);border:2px solid var(--blue)}
+.btn small{font-size:12px;font-weight:500;display:block}
+
+/* header */
+header{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:var(--white);box-shadow:0 1px 0 var(--line)}
+header .wrap{display:flex;align-items:center;gap:18px;min-height:76px}
+.logo{text-decoration:none;display:grid;line-height:1.15}
+.logo b{font-family:var(--f-head);font-weight:900;font-size:24px;color:var(--navy);letter-spacing:.03em}
+.logo b span{color:var(--blue)}
+.logo small{font-size:11px;color:var(--sub)}
+nav.gn{display:flex;gap:2px;margin-left:auto}
+nav.gn a{color:var(--text);text-decoration:none;font-size:14px;font-weight:500;padding:8px 10px;border-radius:6px}
+nav.gn a:hover{background:var(--sky);color:var(--blue)}
+.htel{display:grid;text-align:right;line-height:1.2}
+.htel b{font-family:var(--f-head);font-size:23px;color:var(--navy)}
+.htel b::before{content:"☎ ";font-size:18px;color:var(--blue)}
+.htel small{font-size:11px;color:var(--sub)}
+header .btn{padding:11px 20px;font-size:15px}
+@media (max-width:1000px){nav.gn{display:none}.htel{margin-left:auto}}
+@media (max-width:600px){header .btn{display:none}.htel b{font-size:19px}}
+
+/* hero */
+.hero{background:linear-gradient(180deg,var(--sky) 0%,#f6fbff 100%);overflow:hidden}
+.hero .wrap{display:grid;grid-template-columns:1.05fr .95fr;gap:24px;align-items:center;padding-block:clamp(40px,6vw,72px)}
+.hero .tag{display:inline-block;background:var(--blue);color:#fff;font-family:var(--f-head);font-weight:700;font-size:14px;padding:4px 14px;border-radius:4px}
+.hero h1{font-size:clamp(30px,4.8vw,50px);font-weight:900;margin-top:16px;letter-spacing:.02em}
+.hero h1 .b{color:var(--blue)}
+.hero .lead{margin-top:18px;font-size:16.5px;color:var(--text)}
+.anshin{display:flex;gap:10px;flex-wrap:wrap;margin-top:24px}
+.anshin span{display:flex;align-items:center;gap:6px;background:#fff;border:2px solid var(--sky2);border-radius:999px;padding:6px 16px;font-weight:700;font-size:15px;color:var(--navy)}
+.anshin span::before{content:"✓";color:#fff;background:var(--blue);width:20px;height:20px;border-radius:50%;display:grid;place-items:center;font-size:12px}
+.hero .acts{display:flex;gap:14px;flex-wrap:wrap;margin-top:30px}
+.hero-ill{min-width:0}
+@media (max-width:860px){.hero .wrap{grid-template-columns:1fr}.hero-ill{order:-1;max-width:460px;justify-self:center}}
+
+/* contact band */
+.cband{background:var(--blue);color:#fff}
+.cband .wrap{padding-block:34px;display:grid;grid-template-columns:auto 1fr auto;gap:24px;align-items:center}
+.cband .kw{display:flex;gap:10px;flex-wrap:wrap}
+.cband .kw span{background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.35);border-radius:6px;padding:4px 12px;font-weight:700;font-size:14px}
+.cband h3{color:#fff;font-size:21px}
+.cband .tel{font-family:var(--f-head);font-size:30px;font-weight:900;line-height:1.2}
+.cband .tel small{display:block;font-size:12px;font-weight:500;font-family:var(--f-body);opacity:.85}
+@media (max-width:900px){.cband .wrap{grid-template-columns:1fr;text-align:center;justify-items:center}}
+
+/* worries */
+.worry{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.w{background:#fff;border:2px solid var(--line);border-radius:14px;padding:22px 18px;display:grid;grid-template-columns:56px 1fr;gap:14px;align-items:center;text-decoration:none;color:var(--text);transition:border-color .15s}
+.w:hover{border-color:var(--blue)}
+.w svg{width:56px;height:56px}
+.w b{font-family:var(--f-head);font-size:17px;color:var(--navy);display:block;line-height:1.4}
+.w span{font-size:13px;color:var(--sub);line-height:1.6;display:block;margin-top:2px}
+@media (max-width:860px){.worry{grid-template-columns:1fr 1fr}}
+@media (max-width:540px){.worry{grid-template-columns:1fr}}
+
+/* reasons */
+.rs{display:grid;gap:28px}
+.r{display:grid;grid-template-columns:220px 1fr;gap:32px;align-items:center;background:#fff;border-radius:16px;padding:28px}
+.r:nth-child(even){grid-template-columns:1fr 220px}
+.r:nth-child(even) .ri{order:2}
+.ri{background:var(--sky);border-radius:12px;aspect-ratio:4/3;display:grid;place-items:center;max-width:100%}
+.ri svg{width:70%}
+.r .no{font-family:var(--f-head);font-weight:900;color:var(--orange);font-size:15px}
+.r h3{font-size:clamp(20px,2.5vw,24px);margin:4px 0 10px}
+.r p{color:var(--sub)}
+@media (max-width:720px){.r,.r:nth-child(even){grid-template-columns:1fr}.r:nth-child(even) .ri{order:0}.ri{max-width:260px}}
+
+/* area tabs */
+.tabs{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin-bottom:22px}
+.tabs button{font:inherit;font-weight:700;font-family:var(--f-head);font-size:15px;border:2px solid var(--blue);background:#fff;color:var(--blue);border-radius:999px;padding:8px 20px;cursor:pointer}
+.tabs button[aria-selected="true"]{background:var(--blue);color:#fff}
+.panel{background:#fff;border-radius:16px;padding:28px;display:grid;grid-template-columns:1fr auto;gap:24px;align-items:center;border:2px solid var(--sky2)}
+.panel h3{font-size:22px}
+.panel .towns{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px}
+.panel .towns span{background:var(--sky);border-radius:6px;padding:3px 12px;font-size:14px;color:var(--navy)}
+.panel p{color:var(--sub);margin-top:12px;font-size:15px}
+@media (max-width:720px){.panel{grid-template-columns:1fr}}
+
+/* plans */
+.plans{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.plan{background:#fff;border-radius:16px;overflow:hidden;border:2px solid var(--line);display:grid;grid-template-rows:auto 1fr}
+.plan .ph{padding:18px 24px;color:#fff;background:var(--blue)}
+.plan.b .ph{background:var(--navy)}
+.plan .ph h3{color:#fff;font-size:22px}
+.plan .ph p{font-size:14px;opacity:.9}
+.plan .pb{padding:22px 24px;display:grid;gap:14px;align-content:start}
+.plan ul{list-style:none;padding:0;margin:0;display:grid;gap:8px}
+.plan li{padding-left:28px;position:relative}
+.plan li::before{content:"✓";position:absolute;left:0;top:2px;width:20px;height:20px;border-radius:4px;background:var(--sky);color:var(--blue);font-weight:700;font-size:13px;display:grid;place-items:center}
+.plan .pt{font-weight:700;color:var(--navy);font-size:14px;border-top:1px dashed var(--line);padding-top:12px}
+.plan .pt span{font-weight:400;color:var(--sub)}
+@media (max-width:760px){.plans{grid-template-columns:1fr}}
+
+/* flow */
+.flow{list-style:none;padding:0;margin:0;display:grid;grid-template-columns:repeat(6,1fr);gap:10px;counter-reset:s}
+.flow li{counter-increment:s;background:#fff;border-radius:12px;padding:20px 14px;text-align:center;position:relative;display:grid;gap:6px;align-content:start}
+.flow li::before{content:counter(s);display:grid;place-items:center;width:38px;height:38px;border-radius:50%;background:var(--orange);color:#fff;font-family:var(--f-head);font-weight:900;font-size:18px;margin:0 auto 4px}
+.flow li:not(:last-child)::after{content:"";position:absolute;right:-9px;top:34px;border:7px solid transparent;border-left:8px solid var(--sky2)}
+.flow b{font-family:var(--f-head);color:var(--navy);font-size:16px}
+.flow span{font-size:13px;color:var(--sub);line-height:1.6}
+@media (max-width:900px){.flow{grid-template-columns:repeat(3,1fr)}.flow li::after{display:none}}
+@media (max-width:520px){.flow{grid-template-columns:1fr 1fr}}
+
+/* staff */
+.staff{display:grid;grid-template-columns:300px 1fr;gap:40px;align-items:start;background:#fff;border-radius:16px;padding:32px;border:2px solid var(--sky2)}
+.photo{aspect-ratio:3/4;border-radius:12px;background:var(--sky);display:grid;place-items:center;text-align:center;color:var(--blue);font-size:13px;max-width:100%;border:2px dashed var(--sky2)}
+.photo svg{width:46%}
+.staff .role{color:var(--blue);font-weight:700;font-size:14px}
+.staff h3{font-size:28px;margin:2px 0 4px}
+.staff h3 small{font-size:15px;color:var(--sub);font-weight:500;margin-left:8px}
+.staff .q{font-family:var(--f-head);font-size:20px;color:var(--navy);font-weight:700;margin:18px 0 12px;padding-left:16px;border-left:4px solid var(--orange)}
+.staff p{color:var(--text)}
+.staff p+p{margin-top:12px}
+.staff .info{margin-top:18px;display:flex;gap:8px;flex-wrap:wrap}
+.staff .info span{background:var(--sky);border-radius:6px;padding:3px 12px;font-size:13px;color:var(--navy)}
+@media (max-width:760px){.staff{grid-template-columns:1fr}.photo{max-width:240px}}
+
+/* fee */
+.fee{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.fbox{background:#fff;border-radius:16px;padding:26px;border:2px solid var(--line);min-width:0}
+.fbox h3{font-size:19px;margin-bottom:14px}
+.fbox .free{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:16px}
+.fbox .free span{background:var(--yellow);color:var(--orange-d);font-weight:700;border-radius:6px;padding:4px 12px;font-size:14px}
+.formula{background:var(--sky);border-radius:8px;padding:12px 16px;font-weight:700;color:var(--navy);font-size:17px}
+.calc{width:100%;border-collapse:collapse;margin-top:14px;font-size:15px}
+.calc td{padding:7px 0;border-bottom:1px solid var(--line)}
+.calc td:last-child{text-align:right}
+.calc tr:last-child td{font-weight:700;color:var(--navy);border-bottom:0}
+.fbox ul{margin:0;padding-left:1.2em;display:grid;gap:6px}
+.note{font-size:12.5px;color:var(--sub);margin-top:12px}
+@media (max-width:760px){.fee{grid-template-columns:1fr}}
+
+/* faq */
+.faq{max-width:840px;margin:0 auto;display:grid;gap:12px}
+.faq details{background:#fff;border-radius:12px;border:2px solid var(--line)}
+.faq details[open]{border-color:var(--sky2)}
+.faq summary{list-style:none;cursor:pointer;padding:18px 52px 18px 60px;position:relative;font-weight:700;color:var(--navy)}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::before{content:"Q";position:absolute;left:18px;top:14px;width:30px;height:30px;border-radius:50%;background:var(--blue);color:#fff;display:grid;place-items:center;font-family:var(--f-head)}
+.faq summary::after{content:"＋";position:absolute;right:20px;top:16px;color:var(--blue)}
+.faq details[open] summary::after{content:"－"}
+.faq .a{padding:0 22px 20px 60px;position:relative}
+.faq .a::before{content:"A";position:absolute;left:18px;top:0;width:30px;height:30px;border-radius:50%;background:var(--orange);color:#fff;display:grid;place-items:center;font-family:var(--f-head);font-weight:700}
+.faq .a b{display:block;color:var(--navy);margin-bottom:4px}
+.faq .a p{color:var(--sub);font-size:15px}
+
+/* form */
+.formwrap{display:grid;grid-template-columns:1fr 1.3fr;gap:36px;align-items:start}
+.formside h3{font-size:22px;margin-bottom:12px}
+.formside p{color:var(--sub)}
+.formside .tbox{margin-top:20px;background:#fff;border-radius:12px;padding:20px;text-align:center;border:2px solid var(--sky2)}
+.formside .tbox b{font-family:var(--f-head);font-size:30px;color:var(--navy);display:block;line-height:1.3}
+.formside .tbox small{color:var(--sub)}
+.formside .tbox .btn{margin-top:14px;width:100%}
+.qf{background:#fff;border-radius:16px;padding:28px;box-shadow:0 8px 30px rgba(27,44,72,.08);min-width:0}
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:6px;margin-bottom:20px}
+.steps span{text-align:center;font-size:13px;font-weight:700;padding:8px 4px;border-radius:6px;background:var(--sky);color:var(--sub)}
+.steps span.on{background:var(--blue);color:#fff}
+fieldset{border:0;margin:0;padding:0;display:grid;gap:16px}
+.f{display:grid;gap:6px;font-weight:700;font-size:15px;color:var(--navy)}
+.f .rq{background:var(--orange);color:#fff;font-size:11px;padding:1px 7px;border-radius:3px;margin-left:8px;vertical-align:2px}
+input,select,textarea{font:inherit;font-weight:400;font-size:16px;color:var(--text);padding:12px 14px;border:2px solid var(--line);border-radius:8px;background:#fbfdff;width:100%}
+input:focus,select:focus,textarea:focus{border-color:var(--blue);outline:none}
+textarea{min-height:92px;resize:vertical}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chips input{position:absolute;opacity:0;width:1px;height:1px}
+.chips label{border:2px solid var(--line);border-radius:8px;padding:8px 16px;font-weight:500;font-size:15px;cursor:pointer;background:#fbfdff;color:var(--text)}
+.chips input:checked+label{border-color:var(--blue);background:var(--sky);color:var(--blue);font-weight:700}
+.chips input:focus-visible+label{outline:3px solid var(--orange)}
+.err{color:#c43b1f;font-size:14px;font-weight:700;margin-top:10px}
+.frow{display:flex;gap:10px;margin-top:20px}
+.frow .btn-o{flex:1}
+.frow .btn-w{padding:13px 20px}
+.agree{font-size:12.5px;color:var(--sub);margin-top:14px}
+.done{text-align:center;padding:20px 0}
+.done h3{font-size:22px;color:var(--blue)}
+.done p{margin-top:10px;color:var(--sub)}
+@media (max-width:860px){.formwrap{grid-template-columns:1fr}}
+
+/* buy rent */
+.br{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.brc{background:#fff;border-radius:16px;padding:26px;display:grid;grid-template-columns:64px 1fr;gap:18px;border:2px solid var(--line)}
+.brc svg{width:64px;height:64px}
+.brc h3{font-size:19px}
+.brc p{color:var(--sub);font-size:15px;margin:6px 0 12px}
+.brc a{font-weight:700;text-decoration:none}
+@media (max-width:760px){.br{grid-template-columns:1fr}}
+
+/* company */
+.co{display:grid;grid-template-columns:1.3fr 1fr;gap:30px;align-items:start}
+.cot{width:100%;border-collapse:collapse;background:#fff;border-radius:12px;overflow:hidden;font-size:15px}
+.cot th,.cot td{padding:14px 18px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top}
+.cot th{background:var(--sky);color:var(--navy);width:8.5em;font-weight:700;white-space:nowrap}
+.cot tr:last-child th,.cot tr:last-child td{border-bottom:0}
+.todo{background:var(--yellow);color:var(--orange-d);font-size:12px;font-weight:700;padding:2px 8px;border-radius:4px}
+.access{background:#fff;border-radius:12px;padding:24px;display:grid;gap:12px}
+.access h3{font-size:19px}
+.access .mapbox{background:var(--sky);border-radius:8px;padding:18px;font-size:14px;color:var(--navy)}
+.access .mapbox b{display:block;font-size:15px}
+@media (max-width:860px){.co{grid-template-columns:1fr}}
+
+footer{background:var(--navy);color:#cfd8e6;font-size:14px}
+footer .wrap{padding-block:40px;display:grid;grid-template-columns:1.2fr 1fr;gap:24px}
+footer b{color:#fff;font-family:var(--f-head);font-size:20px}
+footer a{color:#cfd8e6}
+footer .lk{display:flex;flex-wrap:wrap;gap:8px 18px;align-content:start}
+footer .cp{grid-column:1/-1;font-size:12px;opacity:.7;border-top:1px solid rgba(255,255,255,.12);padding-top:16px}
+@media (max-width:700px){footer .wrap{grid-template-columns:1fr}}
+
+/* floating */
+.float{position:fixed;right:max(16px,env(safe-area-inset-right,0px));bottom:calc(20px + env(safe-area-inset-bottom,0px));z-index:30;display:grid;gap:10px}
+.float a{width:76px;height:76px;border-radius:50%;display:grid;place-items:center;text-align:center;color:#fff;text-decoration:none;font-weight:700;font-size:12px;line-height:1.3;box-shadow:0 6px 16px rgba(0,0,0,.18);font-family:var(--f-head)}
+.float .l{background:var(--green)}
+.float .s{background:var(--orange)}
+.mbar{display:none}
+@media (max-width:760px){
+  .float{display:none}
+  .mbar{display:grid;grid-template-columns:1fr 1fr 1fr;position:fixed;left:0;right:0;bottom:0;z-index:30;background:#fff;box-shadow:0 -2px 10px rgba(0,0,0,.08);padding:8px max(8px,env(safe-area-inset-right,0px)) calc(8px + env(safe-area-inset-bottom,0px)) max(8px,env(safe-area-inset-left,0px));gap:6px}
+  .mbar a{display:grid;place-items:center;padding:10px 4px;border-radius:8px;text-decoration:none;font-weight:700;font-size:13px;color:#fff;font-family:var(--f-head)}
+  .mbar .t{background:var(--blue)}.mbar .l{background:var(--green)}.mbar .s{background:var(--orange)}
+  body{padding-bottom:70px}
+}
+@media (prefers-reduced-motion:reduce){.btn{transition:none}.btn:hover{transform:none}}
+
+/* 追加: 下層ページ・スピード査定 */
+.crumb{font-size:13px;color:var(--sub);padding-block:10px}
+.crumb a{color:var(--sub)}
+.lp-hero{background:linear-gradient(180deg,var(--sky) 0%,#f6fbff 100%)}
+.lp-hero .wrap{display:grid;grid-template-columns:1.1fr .9fr;gap:32px;align-items:center;padding-block:clamp(36px,5vw,64px)}
+.lp-hero h1{font-size:clamp(28px,4.4vw,44px);font-weight:900;margin-top:14px}
+.lp-hero h1 .b{color:var(--blue)}
+.lp-hero .lead{margin-top:16px}
+@media (max-width:860px){.lp-hero .wrap{grid-template-columns:1fr}}
+.speed{background:#fff;border:3px solid var(--orange);border-radius:18px;padding:24px;text-align:center;display:grid;gap:8px;min-width:0}
+.speed .big{font-family:var(--f-head);font-weight:900;color:var(--navy);font-size:clamp(22px,3vw,28px);line-height:1.3}
+.speed .big em{font-style:normal;color:var(--orange);font-size:1.6em}
+.speed p{font-size:14px;color:var(--sub)}
+.speed .btn{margin-top:6px}
+.need{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:12px}
+.need div{background:#fff;border:2px solid var(--line);border-radius:12px;padding:16px;font-weight:700;color:var(--navy);display:flex;gap:10px;align-items:center}
+.need div::before{content:"✓";flex:none;width:24px;height:24px;border-radius:50%;background:var(--blue);color:#fff;display:grid;place-items:center;font-size:13px}
+.need div small{display:block;font-weight:400;color:var(--sub);font-size:12.5px}
+.timeline{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.timeline div{background:#fff;border-radius:14px;padding:22px;display:grid;gap:6px;align-content:start}
+.timeline .d{font-family:var(--f-head);font-weight:900;color:var(--orange);font-size:15px}
+.timeline b{font-family:var(--f-head);color:var(--navy);font-size:18px}
+.timeline span{color:var(--sub);font-size:14px}
+@media (max-width:720px){.timeline{grid-template-columns:1fr}}
+.prose{max-width:780px;margin:0 auto;display:grid;gap:14px}
+.prose h2{font-size:clamp(22px,3vw,28px);margin-top:10px}
+.prose h3{font-size:19px;margin-top:6px}
+.prose p,.prose li{color:var(--text)}
+.prose ul{margin:0;padding-left:1.3em;display:grid;gap:6px}
+.typelinks{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+.typelinks a{background:#fff;border:2px solid var(--line);border-radius:14px;padding:18px;text-decoration:none;display:grid;gap:4px}
+.typelinks a:hover{border-color:var(--blue)}
+.typelinks b{font-family:var(--f-head);color:var(--navy);font-size:17px}
+.typelinks span{font-size:13px;color:var(--sub)}
+.typelinks em{font-style:normal;font-size:12px;font-weight:700;color:#fff;background:var(--orange);border-radius:4px;padding:1px 8px;justify-self:start}
+@media (max-width:860px){.typelinks{grid-template-columns:1fr 1fr}}
+@media (max-width:480px){.typelinks{grid-template-columns:1fr}}
+.arealinks{display:flex;flex-wrap:wrap;gap:8px;justify-content:center}
+.arealinks a{background:#fff;border:2px solid var(--sky2);border-radius:999px;padding:6px 18px;text-decoration:none;font-weight:700;color:var(--blue)}
+.staffs{display:grid;gap:24px}
+.staff .photo{aspect-ratio:3/4}
+.check{display:flex;gap:10px;align-items:flex-start;font-size:14px;color:var(--text);font-weight:400}
+.check input{width:20px;height:20px;flex:none;margin-top:4px}
+.opt{font-size:12px;color:var(--sub);font-weight:400;margin-left:6px}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+@media (max-width:520px){.grid2{grid-template-columns:1fr}}
+.thanks{max-width:720px;margin:0 auto;text-align:center;display:grid;gap:18px}
+.thanks h1{font-size:clamp(26px,4vw,36px)}
+.thanks .no{font-family:var(--f-head);font-size:20px;color:var(--navy);background:var(--sky);border-radius:10px;padding:12px}
+/* コラム・実績・声・購入希望者 */
+.posts{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.post{background:#fff;border:2px solid var(--line);border-radius:14px;padding:20px;text-decoration:none;color:var(--text);display:grid;gap:6px;align-content:start}
+.post:hover{border-color:var(--blue)}
+.post b{font-family:var(--f-head);color:var(--navy);font-size:17px;line-height:1.5}
+.pc{justify-self:start;background:var(--sky);color:var(--blue);font-size:12px;font-weight:700;border-radius:4px;padding:1px 8px}
+.pd{font-size:14px;color:var(--sub);line-height:1.7}
+.pm{font-size:12.5px;color:var(--sub)}
+@media (max-width:860px){.posts{grid-template-columns:1fr 1fr}}
+@media (max-width:540px){.posts{grid-template-columns:1fr}}
+.article{max-width:760px;margin:0 auto;background:#fff;border-radius:16px;padding:clamp(20px,4vw,40px)}
+.article h1{font-size:clamp(24px,3.6vw,32px);margin:6px 0 18px}
+.article .body{display:grid;gap:14px}
+.article .body h2{font-size:22px;border-left:5px solid var(--blue);padding-left:12px;margin-top:20px}
+.article .body h3{font-size:18px}
+.article .body ul,.article .body ol{margin:0;padding-left:1.4em;display:grid;gap:6px}
+.works,.buyers{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.wk,.by{background:#fff;border:2px solid var(--line);border-radius:14px;padding:20px;display:grid;gap:6px;align-content:start}
+.wk b,.by b{font-family:var(--f-head);color:var(--navy);font-size:17px}
+.wk p,.by p{font-size:14px;color:var(--sub)}
+.by span{color:var(--orange-d);font-weight:700;font-size:14px}
+@media (max-width:860px){.works,.buyers{grid-template-columns:1fr}}
+.voices{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.vc{margin:0;background:#fff;border-radius:14px;padding:22px;border:2px solid var(--sky2)}
+.vc blockquote{margin:0;font-size:15px;line-height:1.9}
+.vc figcaption{margin-top:10px;font-size:13px;color:var(--sub);font-weight:700}
+@media (max-width:760px){.voices{grid-template-columns:1fr}}
+
+.sbwrap{overflow-x:auto;background:#fff;border-radius:14px;border:2px solid var(--sky2)}
+.sbt{width:100%;border-collapse:collapse;min-width:560px;font-size:15px}
+.sbt th,.sbt td{padding:12px 14px;border-bottom:1px solid var(--line);text-align:right}
+.sbt thead th{background:var(--sky);color:var(--navy);font-size:14px}
+.sbt th:first-child{text-align:left;white-space:nowrap;color:var(--navy)}
+.sbt td b{font-family:var(--f-head);font-size:19px;color:var(--navy)}
+.sbt td small{display:block;font-size:11.5px;color:var(--sub)}
+.sbt td.na{color:var(--sub)}
+.promise{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+.promise div{background:#fff;border-radius:14px;padding:20px;display:grid;gap:6px;align-content:start;border:2px solid var(--line)}
+.promise b{font-family:var(--f-head);font-size:17px;color:var(--navy)}
+.promise span{font-size:14px;color:var(--sub)}
+@media (max-width:860px){.promise{grid-template-columns:1fr 1fr}}
+@media (max-width:480px){.promise{grid-template-columns:1fr}}
+.news{list-style:none;margin:0 auto;padding:0;max-width:860px;background:#fff;border-radius:14px;border:2px solid var(--line)}
+.news li{display:flex;gap:16px;padding:14px 20px;border-bottom:1px solid var(--line);flex-wrap:wrap}
+.news li:last-child{border-bottom:0}
+.news a{color:var(--navy);font-weight:500;text-decoration:none;min-width:0}
+.news a:hover{color:var(--blue);text-decoration:underline}
+.shigyo{max-width:860px;margin:24px auto 0;background:#fff;border-radius:14px;padding:20px 24px;border:2px dashed var(--sky2);font-size:15px;color:var(--text)}
+
+.photo.real{border:0;background:#fff;overflow:hidden;aspect-ratio:1/1}
+.photo.real img{width:100%;height:100%;object-fit:cover;display:block}
+</style>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "RealEstateAgent", "name": "株式会社OLD wide", "alternateName": "OLD wide", "url": "https://www.oldwide.jp/", "telephone": "+81-92-791-4516", "faxNumber": "+81-92-791-4517", "address": {"@type": "PostalAddress", "postalCode": "810-0011", "addressRegion": "福岡県", "addressLocality": "福岡市中央区", "streetAddress": "高砂1丁目1-25 ニューガイアオフィス天神306", "addressCountry": "JP"}, "geo": {"@type": "GeoCoordinates", "latitude": 33.581964, "longitude": 130.4056}, "openingHoursSpecification": [{"@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"], "opens": "10:00", "closes": "18:00"}], "areaServed": [{"@type": "City", "name": "福岡市"}], "founder": {"@type": "Person", "name": "古財 宗一郎"}, "sameAs": ["https://www.instagram.com/oldwide.inc/"]}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "トップ", "item": "https://www.oldwide.jp/"}, {"@type": "ListItem", "position": 2, "name": "コラム", "item": "https://www.oldwide.jp/blog.html"}]}</script>
+</head>
+<body>
+<header>
+  <div class="wrap">
+    <a class="logo" href="index.html"><b>OLD <span>wide</span></b><small>福岡市の不動産売却・査定｜株式会社OLD wide</small></a>
+    <nav class="gn" aria-label="メニュー"><a href="index.html#types">種類別の査定</a><a href="blog.html">コラム</a><a href="index.html#area">エリア</a><a href="index.html#flow">売却の流れ</a><a href="index.html#staff">担当者</a><a href="index.html#faq">よくある質問</a><a href="index.html#company">会社概要</a></nav>
+    <div class="htel"><a href="tel:0927914516" style="text-decoration:none;color:inherit"><b class="tnum">092-791-4516</b></a><small>受付 10:00〜18:00（不定休）</small></div>
+    <a class="btn btn-o" href="#satei-sec">無料査定</a>
+  </div>
+</header>
+<main id="top">
+<div class="wrap crumb"><a href="index.html">トップ</a> ＞ コラム</div>
+<div data-feed hidden></div>
+<section class="sec sky" id="col-sec"><div class="wrap">
+<div class="ttl"><span class="en">COLUMN</span><h1 style="font-size:clamp(26px,4vw,36px)">売却の<span class="mk">コラム</span></h1><p>福岡で家・マンション・土地を売るときに知っておきたいことを、代表の古財と売買担当の佐伯が書いています。</p></div>
+<div class="posts" id="posts"><p>記事を読み込んでいます…</p></div>
+</div></section>
+<section class="sec" id="satei-sec">
+  <div class="wrap">
+    <div class="ttl"><span class="en">CONTACT</span><h2><span class="mk">無料査定</span>のお申し込み</h2><p>入力は1分ほど。<b>最短1日、遅くとも3営業日以内</b>に査定結果をお知らせします。</p></div>
+    <div class="formwrap">
+      <div class="formside">
+        <h3>「価格だけ知りたい」もOKです</h3>
+        <p>売るかどうかは、結果を見てから決めてください。電話が苦手な方は「メールのみ」を選べば、結果はメールでお送りします。</p>
+        <div class="tbox">
+          <small>お電話でのご相談</small>
+          <a href="tel:0927914516" style="text-decoration:none"><b class="tnum">092-791-4516</b></a>
+          <small>受付時間 10:00〜18:00（不定休）</small>
+          <a class="btn btn-line" href="https://line.me/R/ti/p/@927bbokx" target="_blank" rel="noopener">LINEで相談する</a>
+        </div>
+      </div>
+      <form class="qf" id="satei" name="satei" method="POST" novalidate data-type="" data-ward="">
+        <div class="steps" aria-hidden="true"><span class="on" id="st1">1. 種類</span><span id="st2">2. 物件のこと</span><span id="st3">3. ご連絡先</span></div>
+        <div id="p1">
+          <fieldset>
+            <div class="f">物件の種類
+              <div class="chips">
+                <input type="radio" name="type" id="t1" data-k="toushi" value="投資用マンション（賃貸中）"><label for="t1">投資用マンション（貸している）</label>
+                <input type="radio" name="type" id="t2" data-k="mansion" value="マンション（居住用）" checked><label for="t2">マンション（住んでいる・空室）</label>
+                <input type="radio" name="type" id="t3" data-k="kodate" value="一戸建て"><label for="t3">一戸建て</label>
+                <input type="radio" name="type" id="t4" data-k="tochi" value="土地"><label for="t4">土地</label>
+                <input type="radio" name="type" id="t5" data-k="other" value="その他（アパート・ビル等）"><label for="t5">アパート・ビル・その他</label>
+              </div>
+            </div>
+            <div class="f">今のお気持ちに近いもの
+              <div class="chips">
+                <input type="radio" name="purpose" id="u1" value="価格だけ知りたい" checked><label for="u1">価格だけ知りたい</label>
+                <input type="radio" name="purpose" id="u2" value="売却を考えている"><label for="u2">売却を考えている</label>
+                <input type="radio" name="purpose" id="u3" value="早く売りたい・買取も比べたい"><label for="u3">早く売りたい（買取も比較）</label>
+              </div>
+            </div>
+          </fieldset>
+          <div class="frow"><button type="button" class="btn btn-o" id="n1">次へすすむ</button></div>
+        </div>
+        <div id="p2" hidden>
+          <fieldset>
+            <label class="f" for="ward">物件のある場所<span><span class="rq">必須</span></span>
+              <select id="ward" name="ward"><option value="">選んでください</option><option>福岡市中央区</option><option>福岡市博多区</option><option>福岡市南区</option><option>福岡市東区</option><option>福岡市西区</option><option>福岡市城南区</option><option>福岡市早良区</option><option>福岡市以外（福岡県内）</option><option>福岡県外</option></select>
+            </label>
+            <label class="f" data-for="toushi mansion" for="bname">マンション名<span class="opt">分かれば</span><input id="bname" name="bname" placeholder="例）〇〇天神"></label>
+            <div class="grid2" data-for="toushi mansion">
+              <label class="f" for="room">部屋番号<span class="opt">分かれば</span><input id="room" name="room" placeholder="例）505"></label>
+              <label class="f" for="area_m2">専有面積（㎡）<span class="opt">だいたいでOK</span><input id="area_m2" name="area_m2" inputmode="decimal" placeholder="例）25.5"></label>
+            </div>
+            <div class="grid2" data-for="toushi">
+              <label class="f" for="rent">今の家賃（月額）<span class="opt">円</span><input id="rent" name="rent" inputmode="numeric" placeholder="例）65000"></label>
+              <label class="f" for="kanri">管理費＋修繕積立金（月額）<input id="kanri" name="kanri" inputmode="numeric" placeholder="例）12000"></label>
+            </div>
+            <label class="f" data-for="mansion" for="layout">間取り<span class="opt">分かれば</span>
+              <select id="layout" name="layout"><option value="">選んでください</option><option>ワンルーム・1K</option><option>1DK・1LDK</option><option>2DK・2LDK</option><option>3DK・3LDK</option><option>4LDK以上</option></select>
+            </label>
+            <label class="f" data-for="kodate tochi other" for="addr">町名・番地<span class="opt">分かる範囲で</span><input id="addr" name="addr" placeholder="例）南区長住3丁目"></label>
+            <div class="grid2" data-for="kodate tochi other">
+              <label class="f" for="land_m2">土地の広さ（㎡または坪）<input id="land_m2" name="land_m2" placeholder="例）150㎡／45坪"></label>
+              <label class="f" data-for="kodate other" for="bldg_m2">建物の広さ<span class="opt">分かれば</span><input id="bldg_m2" name="bldg_m2" placeholder="例）100㎡"></label>
+            </div>
+            <label class="f" data-for="tochi" for="landstate">今の状態
+              <select id="landstate" name="landstate"><option value="">選んでください</option><option>更地</option><option>古い家が建っている</option><option>駐車場として貸している</option><option>分からない</option></select>
+            </label>
+            <label class="f" data-for="toushi mansion kodate other" for="built">建てられた年<span class="opt">だいたいでOK</span><input id="built" name="built" placeholder="例）2005年／築20年くらい"></label>
+          </fieldset>
+          <p class="err" id="e2" hidden></p>
+          <div class="frow"><button type="button" class="btn btn-w" id="b2">戻る</button><button type="button" class="btn btn-o" id="n2">次へすすむ</button></div>
+        </div>
+        <div id="p3" hidden>
+          <fieldset>
+            <label class="f" for="nm">お名前<span><span class="rq">必須</span></span><input id="nm" name="name_" autocomplete="name" placeholder="例）福岡 太郎"></label>
+            <label class="f" for="contact">ご希望の連絡方法
+              <select id="contact" name="contact"><option>電話でもメールでもよい</option><option>メールのみ</option><option>LINEがよい</option><option>来店して相談したい</option><option>オンライン（Zoom・Google Meet）で相談したい</option></select>
+            </label>
+            <label class="f" for="tel">電話番号<span id="telrq"><span class="rq">必須</span></span><input id="tel" name="tel" type="tel" inputmode="tel" autocomplete="tel" placeholder="例）090-1234-5678"></label>
+            <label class="f" for="mail">メールアドレス<span id="mailrq" hidden><span class="rq">必須</span></span><input id="mail" name="email" type="email" autocomplete="email" placeholder="例）name@example.com"></label>
+            <label class="f" for="memo">ご要望・ご質問<span class="opt">任意</span><textarea id="memo" name="memo" placeholder="例）来年の春までに売りたい／平日の夜なら電話に出られます"></textarea></label>
+            <label class="check" for="vendor_ok"><input type="checkbox" id="vendor_ok" name="vendor_ok" value="同意" checked>より正確な価格を出すため、提携する不動産会社に物件の情報（お名前・連絡先を除く）を伝えて査定することに同意します</label>
+            <label class="check" for="agree"><input type="checkbox" id="agree" name="agree" value="同意"><span><a href="privacy.html">個人情報の取り扱い</a>に同意します<span class="rq">必須</span></span></label>
+          </fieldset>
+          <p class="err" id="e3" hidden></p>
+          <div class="frow"><button type="button" class="btn btn-w" id="b3">戻る</button><button type="submit" class="btn btn-o" id="send">無料査定を申し込む</button></div>
+        </div>
+        <div id="p4" class="done" hidden>
+          <h3>お申し込みありがとうございます</h3>
+          <p>最短1日、遅くとも3営業日以内に査定結果をお知らせします。<br>お急ぎの方は 092-791-4516 までお電話ください。</p>
+          <p class="note">※確認用の表示です。公開後のサイトでは送信完了ページに移ります。</p>
+        </div>
+      </form>
+    </div>
+  </div>
+</section>
+</main>
+<footer>
+  <div class="wrap">
+    <div><b>OLD wide</b><p style="margin-top:8px">株式会社OLD wide<br>〒810-0011 福岡市中央区高砂1-1-25 ニューガイアオフィス天神306<br>TEL 092-791-4516｜宅地建物取引業 福岡県知事（1）第020038号</p></div>
+    <div class="lk">
+      <a href="baikyaku-toushi.html">投資用マンションの売却</a><a href="baikyaku-mansion.html">マンションの売却</a><a href="baikyaku-kodate.html">一戸建ての売却</a><a href="baikyaku-tochi.html">土地の売却</a>
+      <a href="fukuoka-chuo.html">中央区</a><a href="fukuoka-hakata.html">博多区</a><a href="fukuoka-minami.html">南区</a><a href="fukuoka-higashi.html">東区</a><a href="fukuoka-nishi.html">西区</a><a href="fukuoka-jonan.html">城南区</a><a href="fukuoka-sawara.html">早良区</a>
+      <a href="blog.html">コラム</a><a href="index.html#company">会社概要</a><a href="privacy.html">個人情報の取り扱い</a><a href="https://www.instagram.com/oldwide.inc/" target="_blank" rel="noopener">Instagram</a><a href="https://line.me/R/ti/p/@927bbokx" target="_blank" rel="noopener">LINE</a>
+    </div>
+    <p class="cp">© 株式会社OLD wide</p>
+  </div>
+</footer>
+<div class="float"><a class="l" href="https://line.me/R/ti/p/@927bbokx" target="_blank" rel="noopener">LINEで<br>相談</a><a class="s" href="#satei-sec">無料<br>査定</a></div>
+<div class="mbar"><a class="t" href="tel:0927914516">電話する</a><a class="l" href="https://line.me/R/ti/p/@927bbokx" target="_blank" rel="noopener">LINE相談</a><a class="s" href="#satei-sec">無料査定</a></div>
+<script>/* ===== 設定（公開時に入力） ===== */
+var OW = {
+  GAS_URL: "",          // Apps Scriptの「ウェブアプリURL」を貼る
+  GA4_ID: "",           // 例: G-XXXXXXXXXX
+  ADS_ID: "",           // 例: AW-123456789
+  ADS_LABEL: ""         // 例: AbCdEfGhIj（査定完了のコンバージョンラベル）
+};
+/* ============================== */
+(function(){
+  // 計測タグ（IDが入っている時だけ読み込む）
+  if (OW.GA4_ID || OW.ADS_ID) {
+    var s=document.createElement('script');s.async=true;s.src='https://www.googletagmanager.com/gtag/js?id='+(OW.GA4_ID||OW.ADS_ID);document.head.appendChild(s);
+    window.dataLayer=window.dataLayer||[];window.gtag=function(){dataLayer.push(arguments)};gtag('js',new Date());
+    if(OW.GA4_ID)gtag('config',OW.GA4_ID); if(OW.ADS_ID)gtag('config',OW.ADS_ID);
+  }
+  // 広告の流入元を保存
+  try{
+    var q=new URLSearchParams(location.search),src={};
+    ['utm_source','utm_medium','utm_campaign','utm_term','gclid'].forEach(function(k){if(q.get(k))src[k]=q.get(k)});
+    if(Object.keys(src).length)sessionStorage.setItem('ow_src',JSON.stringify(src));
+  }catch(e){}
+
+  // 区タブ
+  var areas=[
+    ['中央区','chuo',['天神','大名','薬院','平尾','六本松','高砂','赤坂','大濠']],
+    ['博多区','hakata',['博多駅前','祇園','住吉','吉塚','竹下','千代']],
+    ['南区','minami',['大橋','高宮','井尻','長住','野間','花畑']],
+    ['東区','higashi',['香椎','千早','箱崎','和白','アイランドシティ','貝塚']],
+    ['西区','nishi',['姪浜','今宿','周船寺','九大学研都市','愛宕','野方']],
+    ['城南区','jonan',['七隈','別府','梅林','茶山','長尾','友丘']],
+    ['早良区','sawara',['西新','藤崎','百道','野芥','賀茂','室見']]
+  ];
+  var tabs=document.getElementById('tabs');
+  if(tabs){
+    var show=function(i){
+      [].forEach.call(tabs.children,function(b,j){b.setAttribute('aria-selected',j===i)});
+      document.getElementById('pn').textContent='福岡市'+areas[i][0];
+      document.getElementById('pt').innerHTML=areas[i][2].map(function(t){return '<span>'+t+'</span>'}).join('');
+      var pb=document.getElementById('pb');pb.textContent=areas[i][0]+'の売却・査定ページへ';pb.href='fukuoka-'+areas[i][1]+'.html';
+    };
+    areas.forEach(function(a,i){var b=document.createElement('button');b.type='button';b.id='tab'+i;b.setAttribute('role','tab');b.textContent=a[0];b.onclick=function(){show(i)};tabs.appendChild(b)});
+    show(0);
+  }
+
+  // 査定フォーム
+  var f=document.getElementById('satei'); if(!f)return;
+  var P=[1,2,3,4].map(function(n){return document.getElementById('p'+n)}),ST=[1,2,3].map(function(n){return document.getElementById('st'+n)});
+  function step(n){P.forEach(function(e,i){if(e)e.hidden=i!==n-1});ST.forEach(function(e,i){e.classList.toggle('on',i===n-1)});var t=f.getBoundingClientRect().top;if(t<0)f.scrollIntoView({block:'start'})}
+  function typ(){var c=f.querySelector('input[name=type]:checked');return c?c.dataset.k:'other'}
+  function sync(){
+    var k=typ();
+    [].forEach.call(f.querySelectorAll('[data-for]'),function(el){var on=el.dataset.for.split(' ').indexOf(k)>=0;el.hidden=!on;[].forEach.call(el.querySelectorAll('input,select'),function(i){i.disabled=!on})});
+    var mo=document.getElementById('contact').value==='メールのみ';
+    document.getElementById('telrq').hidden=mo;document.getElementById('mailrq').hidden=!mo;
+  }
+  [].forEach.call(f.querySelectorAll('input[name=type]'),function(r){r.addEventListener('change',sync)});
+  document.getElementById('contact').addEventListener('change',sync);
+  var pre=f.dataset.type; if(pre){var r=f.querySelector('input[name=type][data-k='+pre+']');if(r)r.checked=true}
+  if(f.dataset.ward)document.getElementById('ward').value=f.dataset.ward;
+  [].forEach.call(document.querySelectorAll('[data-pick]'),function(a){a.addEventListener('click',function(){var r=f.querySelector('input[name=type][data-k='+a.dataset.pick+']');if(r){r.checked=true;sync()}})});
+  sync();
+  function err(id,msg){var e=document.getElementById(id);e.textContent=msg||'';e.hidden=!msg;return !msg}
+  document.getElementById('n1').onclick=function(){step(2)};
+  document.getElementById('b2').onclick=function(){step(1)};
+  document.getElementById('n2').onclick=function(){if(err('e2',document.getElementById('ward').value?'':'物件のある場所を選んでください。'))step(3)};
+  document.getElementById('b3').onclick=function(){step(2)};
+  f.addEventListener('submit',function(ev){
+    ev.preventDefault();
+    var nm=f.name_.value.trim(),tel=f.tel.value.trim(),em=f.email.value.trim(),mo=f.contact.value==='メールのみ';
+    var m=!nm?'お名前を入力してください。':(mo&&!/.+@.+\..+/.test(em))?'メールアドレスを入力してください。':(!mo&&tel.replace(/\D/g,'').length<10)?'電話番号を入力してください。':(!f.agree.checked?'個人情報の取り扱いへの同意にチェックしてください。':'');
+    if(!err('e3',m))return;
+    var fd=new FormData(f);fd.set('name',nm);fd.delete('name_');fd.set('page',location.pathname.split('/').pop()||'index.html');
+    try{var s=sessionStorage.getItem('ow_src');if(s)fd.set('source',s)}catch(e){}
+    var btn=document.getElementById('send');btn.disabled=true;btn.textContent='送信しています…';
+    if(!OW.GAS_URL){step(4);return}
+    fetch(OW.GAS_URL,{method:'POST',mode:'no-cors',body:new URLSearchParams(fd)})
+      .then(function(){location.href='thanks.html'})
+      .catch(function(){btn.disabled=false;btn.textContent='無料査定を申し込む';err('e3','送信できませんでした。お手数ですが 092-791-4516 までお電話ください。')});
+  });
+})();
+
+/* ===== HPに載せるデータ（コラム・実績・お客様の声・購入希望者） ===== */
+(function(){
+  var need=document.querySelector('[data-feed]'); if(!need)return;
+  var q=new URLSearchParams(location.search),id=q.get('id');
+  function esc(s){return String(s==null?'':s).replace(/[&<>"]/g,function(c){return{'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]})}
+  function show(sel){var el=document.querySelector(sel);if(el)el.hidden=false;return el}
+  function card(p){return '<a class="post" href="article.html?id='+encodeURIComponent(p.id)+'"><span class="pc">'+esc(p.cat)+'</span><b>'+esc(p.title)+'</b><span class="pd">'+esc(p.desc)+'</span><span class="pm">'+esc(p.date)+'｜'+esc(p.author)+'</span></a>'}
+  if(!OW.GAS_URL){var e=document.getElementById('article');if(e)e.innerHTML='<p>記事は公開後のサイトで表示されます。</p>';return}
+  fetch(OW.GAS_URL+'?a=feed'+(id?'&id='+encodeURIComponent(id):'')).then(function(r){return r.json()}).then(function(d){
+    var all=d.posts||[],posts=all.filter(function(x){return x.cat!=='お知らせ'}),news=all.filter(function(x){return x.cat==='お知らせ'});
+    var nw=document.getElementById('news');
+    if(nw&&news.length){nw.innerHTML=news.slice(0,6).map(function(p){return '<li><span class="pm">'+esc(p.date)+'</span><a href="article.html?id='+encodeURIComponent(p.id)+'">'+esc(p.title)+'</a></li>'}).join('');show('#news-sec')}
+    var sb=document.getElementById('souba');
+    if(sb&&d.souba&&d.souba.rows&&d.souba.rows.length){
+      var T=['中古マンション','一戸建て（土地と建物）','土地'],W=[];d.souba.rows.forEach(function(r){if(W.indexOf(r.ward)<0)W.push(r.ward)});
+      var cell=function(w,t){var r=d.souba.rows.filter(function(x){return x.ward===w&&x.type===t})[0];return r?'<td class="tnum"><b>'+Number(r.median).toLocaleString()+'</b>万円<small>'+r.n+'件</small></td>':'<td class="na">—</td>'};
+      sb.innerHTML='<table class="sbt"><thead><tr><th>区</th>'+T.map(function(t){return '<th>'+t+'</th>'}).join('')+'</tr></thead><tbody>'+W.map(function(w){return '<tr><th>福岡市'+esc(w)+'</th>'+T.map(function(t){return cell(w,t)}).join('')+'</tr>'}).join('')+'</tbody></table>';
+      var sp=document.getElementById('souba-period');if(sp)sp.textContent='国土交通省「不動産情報ライブラリ」の取引価格情報（'+d.souba.period+'）から、OLD wideが中央値を計算しました（'+d.souba.updated+'更新）。実際の価格は物件ごとに大きく変わります。';
+      show('#souba-sec')}
+    var art0=null;
+    var list=document.getElementById('posts');
+    if(list&&posts.length){var n=Number(list.dataset.limit||0);list.innerHTML=(n?posts.slice(0,n):posts).map(card).join('');show('#col-sec')}
+    var art=document.getElementById('article');
+    if(art){var p=all.filter(function(x){return x.id===id})[0];
+      if(!p){art.innerHTML='<p>記事が見つかりませんでした。<a href="blog.html">コラム一覧へ</a></p>';return}
+      document.title=p.title+'｜OLD wide コラム';var m=document.querySelector('meta[name=description]');if(m)m.content=p.desc||'';
+      art.innerHTML='<p class="pm">'+esc(p.cat)+'｜'+esc(p.date)+'｜筆者：'+esc(p.author)+'</p><h1>'+esc(p.title)+'</h1><div class="body">'+(p.html||'')+'</div>';
+      var more=document.getElementById('posts-more');if(more)more.innerHTML=all.filter(function(x){return x.id!==id}).slice(0,3).map(card).join('');
+      var ld=document.createElement('script');ld.type='application/ld+json';ld.textContent=JSON.stringify({"@context":"https://schema.org","@type":"BlogPosting","headline":p.title,"datePublished":p.date,"author":{"@type":"Person","name":p.author},"publisher":{"@type":"Organization","name":"株式会社OLD wide"},"description":p.desc});document.head.appendChild(ld);
+    }
+    var w=document.getElementById('works');
+    if(w&&(d.works||[]).length){w.innerHTML=d.works.slice(0,6).map(function(x){return '<div class="wk"><span class="pc">'+esc(x['種類'])+'</span><b>'+esc(x['エリア'])+'</b><p>'+esc(x['内容（例：住み替えで3か月で成約）'])+'</p><span class="pm">'+esc(x['成約年月'])+(x['売却までの期間']?'｜売却まで '+esc(x['売却までの期間']):'')+'</span></div>'}).join('');show('#works-sec')}
+    var v=document.getElementById('voices');
+    if(v&&(d.voices||[]).length){v.innerHTML=d.voices.slice(0,4).map(function(x){return '<figure class="vc"><blockquote>'+esc(x['声（ご本人の言葉のまま。掲載の許可をもらうこと）'])+'</blockquote><figcaption>'+esc(x['お名前の表示（例：中央区 40代 K様）'])+'｜'+esc(x['種類'])+'</figcaption></figure>'}).join('');show('#voices-sec')}
+    var b=document.getElementById('buyers');
+    if(b&&(d.buyers||[]).length){var bc=document.getElementById('buyers-count');if(bc)bc.textContent='掲載中 '+d.buyers.length+'件（'+new Date().toLocaleDateString('ja-JP')+' 現在）';b.innerHTML=d.buyers.slice(0,8).map(function(x){return '<div class="by"><b>'+esc(x['探しているエリア'])+'で'+esc(x['種類'])+'</b><span>予算 '+esc(x['予算'])+'</span><p>'+esc(x['条件・ひとこと'])+'</p></div>'}).join('');show('#buyers-sec')}
+  }).catch(function(){});
+})();
+</script>
+</body>
+</html>
