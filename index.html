@@ -53,21 +53,22 @@ img,svg{max-width:100%}
 
 /* header */
 header{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:var(--white);box-shadow:0 1px 0 var(--line)}
-header .wrap{display:flex;align-items:center;gap:18px;min-height:76px}
+header .wrap{display:flex;align-items:center;gap:14px;min-height:76px}
 .logo{text-decoration:none;display:grid;line-height:1.15}
 .logo b{font-family:var(--f-head);font-weight:900;font-size:24px;color:var(--navy);letter-spacing:.03em}
 .logo b span{color:var(--blue)}
 .logo small{font-size:11px;color:var(--sub)}
 nav.gn{display:flex;gap:2px;margin-left:auto}
-nav.gn a{color:var(--text);text-decoration:none;font-size:14px;font-weight:500;padding:8px 10px;border-radius:6px}
+nav.gn a{color:var(--text);text-decoration:none;font-size:14px;font-weight:500;padding:8px 9px;border-radius:6px;white-space:nowrap}
 nav.gn a:hover{background:var(--sky);color:var(--blue)}
-.htel{display:grid;text-align:right;line-height:1.2}
+.htel{display:grid;text-align:right;line-height:1.2;white-space:nowrap;flex-shrink:0}
+.logo{flex-shrink:0}
 .htel b{font-family:var(--f-head);font-size:23px;color:var(--navy)}
 .htel b::before{content:"☎ ";font-size:18px;color:var(--blue)}
 .htel small{font-size:11px;color:var(--sub)}
-header .btn{padding:11px 20px;font-size:15px}
-@media (max-width:1000px){nav.gn{display:none}.htel{margin-left:auto}}
-@media (max-width:600px){header .btn{display:none}.htel b{font-size:19px}}
+header .btn{padding:11px 18px;font-size:15px;white-space:nowrap;flex-shrink:0}
+@media (max-width:1180px){nav.gn{display:none}.htel{margin-left:auto}}
+@media (max-width:600px){header .btn{display:none}.htel b{font-size:18px}.htel small{font-size:10px}.logo small{display:none}}
 
 /* hero */
 .hero{background:linear-gradient(180deg,var(--sky) 0%,#f6fbff 100%);overflow:hidden}
@@ -554,7 +555,7 @@ footer .cp{grid-column:1/-1;font-size:12px;opacity:.7;border-top:1px solid rgba(
     <div class="rs">
       <div class="r">
         <div class="ri"><svg viewBox="0 0 120 90"><circle cx="60" cy="32" r="16" fill="#fff" stroke="#1b2c48" stroke-width="3"/><path d="M30 86 Q30 54 60 54 Q90 54 90 86" fill="#1f6fb8" stroke="#1b2c48" stroke-width="3"/><path d="M54 56 L60 70 L66 56" fill="#fff" stroke="#1b2c48" stroke-width="2"/></svg></div>
-        <div><span class="no">理由 1</span><h3>最初から最後まで、代表が担当します</h3><p>大手の会社では、査定する人と販売する人が変わることがよくあります。OLD wideでは代表の古財がずっと窓口になるので、最初にお話しいただいたことを何度も説明し直す必要がありません。</p></div>
+        <div><span class="no">理由 1</span><h3>最初から最後まで、同じ担当者が責任を持ちます</h3><p>大手の会社では、査定する人と販売する人が変わることがよくあります。OLD wideでは最初にご相談を受けた担当者（代表の古財または佐伯）が引渡しまでずっと窓口になるので、お話しいただいたことを何度も説明し直す必要がありません。</p></div>
       </div>
       <div class="r">
         <div class="ri"><svg viewBox="0 0 120 90"><rect x="34" y="10" width="52" height="70" rx="4" fill="#fff" stroke="#1b2c48" stroke-width="3"/><path d="M44 26 H76 M44 36 H76 M44 46 H66" stroke="#1f6fb8" stroke-width="3"/><circle cx="72" cy="64" r="10" fill="none" stroke="#ef7d1a" stroke-width="3"/></svg></div>

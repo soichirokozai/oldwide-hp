@@ -53,21 +53,22 @@ img,svg{max-width:100%}
 
 /* header */
 header{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:var(--white);box-shadow:0 1px 0 var(--line)}
-header .wrap{display:flex;align-items:center;gap:18px;min-height:76px}
+header .wrap{display:flex;align-items:center;gap:14px;min-height:76px}
 .logo{text-decoration:none;display:grid;line-height:1.15}
 .logo b{font-family:var(--f-head);font-weight:900;font-size:24px;color:var(--navy);letter-spacing:.03em}
 .logo b span{color:var(--blue)}
 .logo small{font-size:11px;color:var(--sub)}
 nav.gn{display:flex;gap:2px;margin-left:auto}
-nav.gn a{color:var(--text);text-decoration:none;font-size:14px;font-weight:500;padding:8px 10px;border-radius:6px}
+nav.gn a{color:var(--text);text-decoration:none;font-size:14px;font-weight:500;padding:8px 9px;border-radius:6px;white-space:nowrap}
 nav.gn a:hover{background:var(--sky);color:var(--blue)}
-.htel{display:grid;text-align:right;line-height:1.2}
+.htel{display:grid;text-align:right;line-height:1.2;white-space:nowrap;flex-shrink:0}
+.logo{flex-shrink:0}
 .htel b{font-family:var(--f-head);font-size:23px;color:var(--navy)}
 .htel b::before{content:"☎ ";font-size:18px;color:var(--blue)}
 .htel small{font-size:11px;color:var(--sub)}
-header .btn{padding:11px 20px;font-size:15px}
-@media (max-width:1000px){nav.gn{display:none}.htel{margin-left:auto}}
-@media (max-width:600px){header .btn{display:none}.htel b{font-size:19px}}
+header .btn{padding:11px 18px;font-size:15px;white-space:nowrap;flex-shrink:0}
+@media (max-width:1180px){nav.gn{display:none}.htel{margin-left:auto}}
+@media (max-width:600px){header .btn{display:none}.htel b{font-size:18px}.htel small{font-size:10px}.logo small{display:none}}
 
 /* hero */
 .hero{background:linear-gradient(180deg,var(--sky) 0%,#f6fbff 100%);overflow:hidden}
