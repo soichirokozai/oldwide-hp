@@ -428,6 +428,23 @@ footer .cp{grid-column:1/-1;font-size:12px;opacity:.7;border-top:1px solid rgba(
 .l2c h3{font-size:20px}.l2c p{margin:0;font-size:14.5px;color:var(--sub)}
 .l2c .btn{align-self:stretch;margin-top:6px}.l2c small{color:var(--sub);font-size:12px}
 @media (max-width:700px){.line2{grid-template-columns:1fr}}
+/* 物件タブ・資料請求 */
+.ltabs{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin:0 0 20px}
+.ltabs button{font:inherit;font-weight:700;font-size:14px;border:2px solid var(--sky2);background:#fff;color:var(--navy);border-radius:999px;padding:7px 16px;cursor:pointer}
+.ltabs button.on{background:var(--navy);border-color:var(--navy);color:#fff}
+.lc.msk .lph{background:linear-gradient(135deg,#1b2c48,#1f6fb8)}
+.lph .noimg.lock{color:#fff;font-weight:700;font-size:14px;text-align:center;line-height:1.7}
+.lbtn{font-size:15px;padding:12px 18px}
+.modal{position:fixed;inset:0;background:rgba(15,25,40,.55);z-index:100;display:grid;place-items:center;padding:16px}
+.modal[hidden]{display:none}
+.mbox{position:relative;background:#fff;border-radius:16px;max-width:460px;width:100%;max-height:90vh;overflow:auto;padding:26px 22px}
+.mbox h3{font-size:19px;margin-bottom:6px}.mbox .mnm{font-weight:700;color:var(--blue);margin:0 0 8px}
+.mbox form{display:grid;gap:12px;margin-top:10px}.mbox input,.mbox select,.mbox textarea{font:inherit;padding:10px 12px;border:2px solid var(--line);border-radius:8px;width:100%}
+.mbox .agree{font-size:14px;display:flex;gap:8px;align-items:center}.mbox .agree input{width:auto}
+.mx{position:absolute;right:10px;top:8px;border:0;background:none;font-size:26px;line-height:1;cursor:pointer;color:var(--sub)}
+.modal{z-index:1000}
+.mbox .f{display:block}.mbox .f .rq{display:inline-block;width:auto;margin-left:8px}.mbox .f .opt{margin-left:8px}
+.mbox .f input,.mbox .f select,.mbox .f textarea{display:block;margin-top:6px}
 </style>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "RealEstateAgent", "name": "株式会社OLD wide", "alternateName": ["OLD wide", "福岡不動産wide", "福岡不動産ワイド"], "url": "https://www.oldwide.jp/", "telephone": "+81-92-791-4516", "faxNumber": "+81-92-791-4517", "address": {"@type": "PostalAddress", "postalCode": "810-0011", "addressRegion": "福岡県", "addressLocality": "福岡市中央区", "streetAddress": "高砂1丁目1-25 ニューガイアオフィス天神", "addressCountry": "JP"}, "geo": {"@type": "GeoCoordinates", "latitude": 33.581964, "longitude": 130.4056}, "openingHoursSpecification": [{"@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"], "opens": "10:00", "closes": "18:00"}], "areaServed": [{"@type": "City", "name": "福岡市"}], "founder": {"@type": "Person", "name": "古財 宗一郎"}, "sameAs": ["https://www.instagram.com/oldwide.inc/"]}</script>
 </head>
@@ -589,15 +606,23 @@ var OW = {
       (x['ひとこと（例：入居者付きのまま2か月で成約）']?'<p>'+esc(x['ひとこと（例：入居者付きのまま2か月で成約）'])+'</p>':'')+
       '<span class="pm">'+esc(x['成約年月'])+' 成約'+(x['売却までの期間']?'｜売却まで '+esc(x['売却までの期間']):'')+'</span></div>'}).join('');show('#works-sec')}
     var L=d.listings||[],lg=document.getElementById('listings');
-    if(lg&&L.length){var lim=Number(lg.dataset.limit||0),line='https://line.me/R/oaMessage/@927bbokx/?';
-      lg.innerHTML=(lim?L.slice(0,lim):L).map(function(x){
-        var sp=[x.layout,x.area?x.area+'㎡':'',x.built?x.built+'築':''].filter(Boolean).join('｜');
-        var msg='【物件のお問い合わせ】\n'+x.name+'（'+x.addr+'・'+x.price+'万円）\nについて詳しく知りたいです。';
-        return '<article class="lc"><div class="lph">'+(x.imgs&&x.imgs[0]?'<img src="'+esc(x.imgs[0])+'" alt="'+esc(x.name)+'の写真" loading="lazy">':'<span class="noimg">写真準備中</span>')+'<span class="lt">'+esc(x.type)+'</span></div>'+
-          '<div class="lb"><h3>'+esc(x.name)+'</h3><p class="lpr"><b>'+Number(x.price).toLocaleString()+'</b>万円'+(x.yield?'<span class="ly">利回り '+esc(x.yield)+'%</span>':'')+'</p>'+
+    if(lg&&L.length){var lim=Number(lg.dataset.limit||0);
+      var TABS=[['all','すべて'],['マンション','マンション'],['投資用マンション','投資用'],['一戸建て','一戸建て'],['土地','土地'],['一棟アパート・マンション','一棟']];
+      var cardOf=function(x){
+        var sp=[x.layout,x.area?x.area+'㎡':'',x.built?(x.masked?x.built:x.built+'築'):''].filter(Boolean).join('｜');
+        var price=x.masked?'<b>'+esc(x.band)+'</b>':'<b>'+Number(x.price).toLocaleString()+'</b>万円';
+        var ph=x.masked?'<span class="noimg lock">詳細は資料請求の方のみ<br>ご案内しています</span>':(x.imgs&&x.imgs[0]?'<img src="'+esc(x.imgs[0])+'" alt="'+esc(x.name)+'の写真" loading="lazy">':'<span class="noimg">写真準備中</span>');
+        return '<article class="lc'+(x.masked?' msk':'')+'" data-type="'+esc(x.type)+'"><div class="lph">'+ph+'<span class="lt">'+esc(x.type)+'</span></div>'+
+          '<div class="lb"><h3>'+esc(x.name)+'</h3><p class="lpr">'+price+(x.yield?'<span class="ly">利回り '+esc(x.yield)+'%</span>':'')+'</p>'+
           '<p class="la">'+esc(x.addr)+(x.access?'<br>'+esc(x.access):'')+'</p>'+(sp?'<p class="ls">'+esc(sp)+'</p>':'')+(x.note?'<p class="ln">'+esc(x.note)+'</p>':'')+
           '<p class="ld">取引態様：'+esc(x.deal||'媒介')+'｜情報確認日 '+esc(x.checked)+'｜次回更新予定 '+esc(x.next)+'</p>'+
-          '<a class="btn btn-line lbtn" href="'+line+encodeURIComponent(msg)+'" target="_blank" rel="noopener">LINEで問い合わせる</a></div></article>'}).join('');
+          '<button type="button" class="btn btn-o lbtn" data-lid="'+esc(x.id)+'" data-lname="'+esc(x.name)+'">詳しい資料をもらう（無料）</button></div></article>'};
+      var draw=function(t){var arr=L.filter(function(x){return t==='all'||x.type===t});lg.innerHTML=(lim?arr.slice(0,lim):arr).map(cardOf).join('')||'<p class="note">この種類の物件は、ただいま掲載がありません。</p>'};
+      var tb=document.getElementById('ltabs');
+      if(tb){var have=TABS.filter(function(t){return t[0]==='all'||L.some(function(x){return x.type===t[0]})});
+        tb.innerHTML=have.map(function(t,i){return '<button type="button" class="'+(i?'':'on')+'" data-t="'+t[0]+'">'+t[1]+'</button>'}).join('');
+        tb.onclick=function(e){var b=e.target.closest('button');if(!b)return;[].forEach.call(tb.children,function(c){c.classList.toggle('on',c===b)});draw(b.dataset.t)}}
+      draw('all');
       var lc=document.getElementById('listings-count');if(lc)lc.textContent='掲載中 '+L.length+'件';
       show('#listings-sec')}
     var v=document.getElementById('voices');
@@ -637,6 +662,38 @@ var OW = {
     out.innerHTML='<table><tr><th>売れた価格</th><td>'+yen(p*10000)+'</td></tr><tr><th>仲介手数料（税込・上限）</th><td>− '+y(a)+'</td></tr><tr><th>売買契約書の印紙代</th><td>− '+y(b)+'</td></tr>'+(z?'<tr><th>ローン完済（残高）</th><td>− '+yen(z*10000)+'</td></tr><tr><th>抵当権を消す登記（目安）</th><td>− '+y(c)+'</td></tr>':'')+'<tr class="tt"><th>手元に残るお金（目安）</th><td>'+yen(t)+'</td></tr></table><p class="note">※利益が出た場合の税金や、引越し・測量などの費用は含みません。正確な金額は査定のときに一緒に計算します。</p>';
     out.hidden=false}
   f.addEventListener('input',calc);calc();
+})();
+
+/* ===== 物件の資料請求（お名前・電話・メール必須） ===== */
+(function(){
+  document.addEventListener('click',function(e){var b=e.target.closest&&e.target.closest('.lbtn[data-lid]');if(!b)return;open(b.dataset.lid,b.dataset.lname)});
+  function open(lid,lname){
+    var m=document.getElementById('shiryo');
+    if(!m){m=document.createElement('div');m.id='shiryo';m.className='modal';document.body.appendChild(m)}
+    m.innerHTML='<div class="mbox" role="dialog" aria-modal="true" aria-labelledby="shT"><button type="button" class="mx" aria-label="閉じる">×</button>'+
+      '<h3 id="shT">詳しい資料のご請求</h3><p class="mnm"></p><p class="note">物件の所在地・資料は、ご本人確認ができた方にだけお送りしています。お名前・お電話番号・メールアドレスをご入力ください。</p>'+
+      '<form><label class="f">お名前<span class="rq">必須</span><input name="name" required autocomplete="name"></label>'+
+      '<label class="f">電話番号<span class="rq">必須</span><input name="tel" type="tel" required autocomplete="tel" inputmode="tel"></label>'+
+      '<label class="f">メールアドレス<span class="rq">必須</span><input name="email" type="email" required autocomplete="email"></label>'+
+      '<label class="f">ご検討の目的<select name="purpose"><option>自分で住む</option><option>投資用</option><option>その他</option></select></label>'+
+      '<label class="f">ご要望<span class="opt">任意</span><textarea name="memo" rows="2"></textarea></label>'+
+      '<label class="agree"><input type="checkbox" required> <a href="privacy.html" target="_blank">個人情報の取り扱い</a>に同意します</label>'+
+      '<button class="btn btn-o" type="submit">資料を請求する</button><p class="err" hidden></p></form></div>';
+    m.querySelector('.mnm').textContent=lname||'';
+    m.hidden=false;document.body.style.overflow='hidden';
+    var close=function(){m.hidden=true;document.body.style.overflow=''};
+    m.querySelector('.mx').onclick=close;m.onclick=function(e){if(e.target===m)close()};
+    var f=m.querySelector('form');
+    f.onsubmit=function(e){e.preventDefault();if(!f.reportValidity())return;
+      var fd=new FormData(f);fd.append('form','shiryo');fd.append('lid',lid);fd.append('lname',lname||'');fd.append('page',location.pathname);
+      var bt=f.querySelector('button[type=submit]');bt.disabled=true;bt.textContent='送信中…';
+      fetch(OW.GAS_URL,{method:'POST',mode:'no-cors',body:new URLSearchParams(fd)}).then(function(){
+        m.querySelector('.mbox').innerHTML='<button type="button" class="mx" aria-label="閉じる">×</button><h3>受け付けました</h3><p>ご請求ありがとうございます。担当者から詳しい資料をお送りします。<br>確認のメールをお送りしましたのでご確認ください。</p><p class="note">お急ぎの方は 092-791-4516 までお電話ください。</p>';
+        m.querySelector('.mx').onclick=close;
+        try{if(window.gtag)gtag('event','generate_lead',{form:'shiryo',lid:lid})}catch(x){}
+      }).catch(function(){bt.disabled=false;bt.textContent='資料を請求する';var er=f.querySelector('.err');er.hidden=false;er.textContent='送信できませんでした。お手数ですがお電話（092-791-4516）でお問い合わせください。'})};
+    setTimeout(function(){var i=m.querySelector('input[name=name]');if(i)i.focus()},50);
+  }
 })();
 </script>
 </body>
