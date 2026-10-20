@@ -3,10 +3,10 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-<title>福岡市早良区の不動産売却・無料査定｜最短1日で結果｜OLD wide</title>
+<title>福岡市早良区の不動産売却・無料査定｜最短1日で結果｜福岡不動産売買wide</title>
 <meta name="description" content="福岡市早良区（西新・藤崎・百道・野芥など）のマンション・一戸建て・土地・投資用マンションの売却査定。最短1日〜3営業日で結果。査定無料・秘密厳守の株式会社OLD wide。">
 <link rel="canonical" href="https://www.oldwide.jp/fukuoka-sawara.html">
-<meta property="og:title" content="福岡市早良区の不動産売却・無料査定｜最短1日で結果｜OLD wide">
+<meta property="og:title" content="福岡市早良区の不動産売却・無料査定｜最短1日で結果｜福岡不動産売買wide">
 <meta property="og:description" content="福岡市早良区（西新・藤崎・百道・野芥など）のマンション・一戸建て・土地・投資用マンションの売却査定。最短1日〜3営業日で結果。査定無料・秘密厳守の株式会社OLD wide。">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://www.oldwide.jp/fukuoka-sawara.html">
@@ -55,9 +55,9 @@ img,svg{max-width:100%}
 header{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:var(--white);box-shadow:0 1px 0 var(--line)}
 header .wrap{display:flex;align-items:center;gap:14px;min-height:76px}
 .logo{text-decoration:none;display:grid;line-height:1.15}
-.logo b{font-family:var(--f-head);font-weight:900;font-size:24px;color:var(--navy);letter-spacing:.03em}
+.logo b{font-family:var(--f-head);font-weight:900;font-size:22px;color:var(--navy);letter-spacing:.02em;white-space:nowrap}
 .logo b span{color:var(--blue)}
-.logo small{font-size:11px;color:var(--sub)}
+.logo small{font-size:11px;color:var(--sub);white-space:nowrap}
 nav.gn{display:flex;gap:2px;margin-left:auto}
 nav.gn a{color:var(--text);text-decoration:none;font-size:14px;font-weight:500;padding:8px 9px;border-radius:6px;white-space:nowrap}
 nav.gn a:hover{background:var(--sky);color:var(--blue)}
@@ -68,7 +68,7 @@ nav.gn a:hover{background:var(--sky);color:var(--blue)}
 .htel small{font-size:11px;color:var(--sub)}
 header .btn{padding:11px 18px;font-size:15px;white-space:nowrap;flex-shrink:0}
 @media (max-width:1180px){nav.gn{display:none}.htel{margin-left:auto}}
-@media (max-width:600px){header .btn{display:none}.htel b{font-size:18px}.htel small{font-size:10px}.logo small{display:none}}
+@media (max-width:600px){header .btn{display:none}.htel b{font-size:16px}.htel b::before{font-size:13px}.htel small{font-size:9.5px}.logo b{font-size:17px}.logo small{font-size:9px}}
 
 /* hero */
 .hero{background:linear-gradient(180deg,var(--sky) 0%,#f6fbff 100%);overflow:hidden}
@@ -373,16 +373,61 @@ footer .cp{grid-column:1/-1;font-size:12px;opacity:.7;border-top:1px solid rgba(
 
 .photo.real{border:0;background:#fff;overflow:hidden;aspect-ratio:1/1}
 .photo.real img{width:100%;height:100%;object-fit:cover;display:block}
+
+/* 販売物件 */
+.listings{display:grid;grid-template-columns:repeat(auto-fill,minmax(290px,1fr));gap:20px}
+.lc{background:#fff;border:1px solid var(--line);border-radius:14px;overflow:hidden;display:flex;flex-direction:column;box-shadow:0 2px 10px rgba(27,44,72,.06)}
+.lph{position:relative;aspect-ratio:4/3;background:var(--sky)}
+.lph img{width:100%;height:100%;object-fit:cover;display:block}
+.lph .noimg{position:absolute;inset:0;display:grid;place-items:center;color:var(--sub);font-size:14px}
+.lt{position:absolute;left:12px;top:12px;background:var(--blue);color:#fff;font-size:12px;font-weight:700;border-radius:6px;padding:3px 10px}
+.lb{padding:16px 18px 18px;display:flex;flex-direction:column;gap:6px;flex:1}
+.lb h3{font-size:17px}
+.lpr{color:var(--orange-d);font-weight:700;margin:0}.lpr b{font-family:var(--f-head);font-size:26px;margin-right:2px}
+.ly{display:inline-block;margin-left:10px;background:var(--yellow);color:var(--orange-d);border-radius:6px;padding:2px 8px;font-size:13px}
+.la,.ls,.ln{margin:0;font-size:14px;line-height:1.6}.ls{color:var(--navy);font-weight:700}.ln{color:var(--sub)}
+.ld{margin:4px 0 0;font-size:11.5px;color:var(--sub)}
+.lbtn{margin-top:auto;align-self:stretch;text-align:center}
+/* 実績 */
+.works{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:16px}
+.wk{background:#fff;border:1px solid var(--line);border-radius:12px;padding:18px;display:flex;flex-direction:column;gap:6px}
+.wk b{font-family:var(--f-head);font-size:18px;color:var(--navy)}
+.wk .wp{margin:0;font-family:var(--f-head);font-weight:900;font-size:22px;color:var(--orange-d)}
+.wk .wp small{display:block;font-family:var(--f-body);font-weight:700;font-size:14px;color:var(--navy)}
+.wk p{margin:0;font-size:14px}
+/* 診断・計算 */
+.tools{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:20px}
+.tool{background:#fff;border-radius:16px;padding:24px;box-shadow:0 2px 12px rgba(27,44,72,.07)}
+.tool h3{font-size:19px;margin-bottom:10px}
+.sstep{color:var(--blue);font-weight:700;font-size:13px;margin:0 0 6px}
+.sqt{font-family:var(--f-head);font-weight:700;color:var(--navy);font-size:18px;margin:0 0 12px}
+.sq button{display:block;width:100%;text-align:left;font:inherit;font-weight:700;color:var(--navy);background:var(--sky);border:2px solid var(--sky2);border-radius:10px;padding:13px 16px;margin:0 0 10px;cursor:pointer}
+.sq button:hover{border-color:var(--blue);background:#fff}
+.sq .sres{font-size:15px;margin:0 0 16px}
+.sq .sre{display:inline-block;width:auto;margin:12px 0 0;background:none;border:0;color:var(--blue);text-decoration:underline;padding:4px}
+#tedori .f{margin-bottom:12px}
+.tout table{width:100%;border-collapse:collapse;font-size:14px;margin-top:6px}
+.tout th{text-align:left;font-weight:500;padding:8px 0;border-bottom:1px solid var(--line)}
+.tout td{text-align:right;padding:8px 0;border-bottom:1px solid var(--line);font-variant-numeric:tabular-nums;white-space:nowrap}
+.tout .tt th,.tout .tt td{font-weight:900;color:var(--orange-d);font-size:17px;border-bottom:0}
+.btn-b{background:var(--blue);color:#fff;box-shadow:0 4px 0 var(--blue-d)}
+/* ヒーロー写真 */
+.hero-photo{position:relative}
+.hero-photo img{width:100%;height:auto;aspect-ratio:16/9;object-fit:cover;border-radius:20px;box-shadow:0 18px 40px rgba(27,44,72,.18);display:block}
+.hero-photo span{position:absolute;background:#fff;color:var(--navy);font-weight:700;font-size:14px;border-radius:999px;padding:7px 14px;box-shadow:0 6px 16px rgba(27,44,72,.15)}
+.hero-photo .hb1{left:-10px;top:14%}.hero-photo .hb2{right:-8px;top:46%}.hero-photo .hb3{left:12%;bottom:-14px}
+@media (max-width:860px){.hero-photo{max-width:none;width:100%}.hero-photo .hb1{left:8px}.hero-photo .hb2{right:8px}}
+@media (max-width:420px){header .wrap{gap:8px}.logo b{font-size:16px}.htel b{font-size:15px}.htel small{display:none}}
 </style>
-<script type="application/ld+json">{"@context": "https://schema.org", "@type": "RealEstateAgent", "name": "株式会社OLD wide", "alternateName": "OLD wide", "url": "https://www.oldwide.jp/", "telephone": "+81-92-791-4516", "faxNumber": "+81-92-791-4517", "address": {"@type": "PostalAddress", "postalCode": "810-0011", "addressRegion": "福岡県", "addressLocality": "福岡市中央区", "streetAddress": "高砂1丁目1-25 ニューガイアオフィス天神306", "addressCountry": "JP"}, "geo": {"@type": "GeoCoordinates", "latitude": 33.581964, "longitude": 130.4056}, "openingHoursSpecification": [{"@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"], "opens": "10:00", "closes": "18:00"}], "areaServed": [{"@type": "City", "name": "福岡市"}], "founder": {"@type": "Person", "name": "古財 宗一郎"}, "sameAs": ["https://www.instagram.com/oldwide.inc/"]}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "RealEstateAgent", "name": "株式会社OLD wide", "alternateName": ["OLD wide", "福岡不動産売買wide", "福岡不動産売買ワイド"], "url": "https://www.oldwide.jp/", "telephone": "+81-92-791-4516", "faxNumber": "+81-92-791-4517", "address": {"@type": "PostalAddress", "postalCode": "810-0011", "addressRegion": "福岡県", "addressLocality": "福岡市中央区", "streetAddress": "高砂1丁目1-25 ニューガイアオフィス天神", "addressCountry": "JP"}, "geo": {"@type": "GeoCoordinates", "latitude": 33.581964, "longitude": 130.4056}, "openingHoursSpecification": [{"@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"], "opens": "10:00", "closes": "18:00"}], "areaServed": [{"@type": "City", "name": "福岡市"}], "founder": {"@type": "Person", "name": "古財 宗一郎"}, "sameAs": ["https://www.instagram.com/oldwide.inc/"]}</script>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "早良区以外の物件も査定できますか？", "acceptedAnswer": {"@type": "Answer", "text": "できます。福岡市内のほかの区や、福岡県内の物件もご相談ください。"}}, {"@type": "Question", "name": "査定をお願いしたら、必ず売らないといけませんか？", "acceptedAnswer": {"@type": "Answer", "text": "いいえ、売らなくても大丈夫です。査定は無料で、結果を見てお断りいただいても費用はかかりません。"}}, {"@type": "Question", "name": "しつこく営業の電話がかかってきませんか？", "acceptedAnswer": {"@type": "Answer", "text": "ご希望しない連絡はいたしません。「メールのみ」を選んでいただければ、結果はメールだけでお送りします。"}}, {"@type": "Question", "name": "本当に1〜3日で結果が出ますか？", "acceptedAnswer": {"@type": "Answer", "text": "机上査定（資料による査定）なら、最短1日、遅くとも3営業日以内にお知らせします。お部屋や建物を実際に見る訪問査定をご希望の場合は、日程を調整してから結果をお伝えします。"}}, {"@type": "Question", "name": "近所や入居者に知られずに売れますか？", "acceptedAnswer": {"@type": "Answer", "text": "できます。広告を出さずに、購入を希望している方や不動産会社にだけご紹介する方法があります。"}}]}</script>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "トップ", "item": "https://www.oldwide.jp/"}, {"@type": "ListItem", "position": 2, "name": "早良区の不動産売却", "item": "https://www.oldwide.jp/fukuoka-sawara.html"}]}</script>
 </head>
 <body>
 <header>
   <div class="wrap">
-    <a class="logo" href="index.html"><b>OLD <span>wide</span></b><small>福岡市の不動産売却・査定｜株式会社OLD wide</small></a>
-    <nav class="gn" aria-label="メニュー"><a href="index.html#types">種類別の査定</a><a href="blog.html">コラム</a><a href="index.html#area">エリア</a><a href="index.html#flow">売却の流れ</a><a href="index.html#staff">担当者</a><a href="index.html#faq">よくある質問</a><a href="index.html#company">会社概要</a></nav>
+    <a class="logo" href="index.html"><b>福岡不動産売買<span>wide</span></b><small>運営：株式会社OLD wide｜福岡市の不動産売却・購入</small></a>
+    <nav class="gn" aria-label="メニュー"><a href="bukken.html">販売物件</a><a href="index.html#types">種類別の査定</a><a href="blog.html">コラム</a><a href="index.html#area">エリア</a><a href="index.html#staff">担当者</a><a href="index.html#faq">よくある質問</a><a href="index.html#company">会社概要</a></nav>
     <div class="htel"><a href="tel:0927914516" style="text-decoration:none;color:inherit"><b class="tnum">092-791-4516</b></a><small>受付 10:00〜18:00（不定休）</small></div>
     <a class="btn btn-o" href="#satei-sec">無料査定</a>
   </div>
@@ -449,8 +494,8 @@ footer .cp{grid-column:1/-1;font-size:12px;opacity:.7;border-top:1px solid rgba(
           <h3>古財 宗一郎<small>こざい そういちろう</small></h3>
           <p class="q">「いくらで売れる？」の一言から、気軽にどうぞ。</p>
           <p>不動産の仕事について10年以上。賃貸の仲介から始まり、今は投資用マンション・一戸建て・相続・住み替えのご相談を多くお受けしています。いちばんうれしいのは、すべてが終わったあとに「古財さんに頼んでよかった」と言っていただける瞬間です。</p>
-          <p>ゴルフのスコアはなかなか縮まりませんが、お返事の早さには自信があります。売却の話は、大好きな焼肉の「都」で語れるくらい熱く、でも専門用語なしで分かりやすくお話しします。売るかどうか決めていなくても大丈夫。まずは「うちっていくら？」と聞いてください。</p>
-          <div class="info"><span>宅地建物取引士</span><span>ファイナンシャルプランナー</span><span>出身：大分県大分市</span><span>得意：投資用マンション・一戸建て・相続・住み替え</span><span>趣味：ゴルフ・サッカー</span><span>好きな店：焼肉「都」</span></div>
+          <p>ゴルフのスコアはなかなか縮まりませんが、お返事の早さには自信があります。売却の話は、大好きな焼肉の話と同じくらい熱く、でも専門用語なしで分かりやすくお話しします。売るかどうか決めていなくても大丈夫。まずは「うちっていくら？」と聞いてください。</p>
+          <div class="info"><span>宅地建物取引士</span><span>ファイナンシャルプランナー</span><span>出身：大分県大分市</span><span>得意：投資用マンション・一戸建て・相続・住み替え</span><span>趣味：ゴルフ・サッカー</span><span>パワーの源：焼肉</span></div>
         </div>
       </div>
       <div class="staff">
@@ -567,7 +612,7 @@ footer .cp{grid-column:1/-1;font-size:12px;opacity:.7;border-top:1px solid rgba(
 </main>
 <footer>
   <div class="wrap">
-    <div><b>OLD wide</b><p style="margin-top:8px">株式会社OLD wide<br>〒810-0011 福岡市中央区高砂1-1-25 ニューガイアオフィス天神306<br>TEL 092-791-4516｜宅地建物取引業 福岡県知事（1）第020038号</p></div>
+    <div><b>福岡不動産売買wide</b><p style="margin-top:8px">運営：株式会社OLD wide<br>〒810-0011 福岡市中央区高砂1-1-25 ニューガイアオフィス天神<br>TEL 092-791-4516｜宅地建物取引業 福岡県知事（1）第020038号</p></div>
     <div class="lk">
       <a href="baikyaku-toushi.html">投資用マンションの売却</a><a href="baikyaku-mansion.html">マンションの売却</a><a href="baikyaku-kodate.html">一戸建ての売却</a><a href="baikyaku-tochi.html">土地の売却</a>
       <a href="fukuoka-chuo.html">中央区</a><a href="fukuoka-hakata.html">博多区</a><a href="fukuoka-minami.html">南区</a><a href="fukuoka-higashi.html">東区</a><a href="fukuoka-nishi.html">西区</a><a href="fukuoka-jonan.html">城南区</a><a href="fukuoka-sawara.html">早良区</a>
@@ -690,12 +735,61 @@ var OW = {
       var ld=document.createElement('script');ld.type='application/ld+json';ld.textContent=JSON.stringify({"@context":"https://schema.org","@type":"BlogPosting","headline":p.title,"datePublished":p.date,"author":{"@type":"Person","name":p.author},"publisher":{"@type":"Organization","name":"株式会社OLD wide"},"description":p.desc});document.head.appendChild(ld);
     }
     var w=document.getElementById('works');
-    if(w&&(d.works||[]).length){w.innerHTML=d.works.slice(0,6).map(function(x){return '<div class="wk"><span class="pc">'+esc(x['種類'])+'</span><b>'+esc(x['エリア'])+'</b><p>'+esc(x['内容（例：住み替えで3か月で成約）'])+'</p><span class="pm">'+esc(x['成約年月'])+(x['売却までの期間']?'｜売却まで '+esc(x['売却までの期間']):'')+'</span></div>'}).join('');show('#works-sec')}
+    if(w&&(d.works||[]).length){w.innerHTML=d.works.slice(0,Number(w.dataset.limit||9)).map(function(x){
+      var sp=[x['間取り'],x['面積（㎡）']?x['面積（㎡）']+'㎡':''].filter(Boolean).join('・');
+      return '<div class="wk"><span class="pc">'+esc(x['種類'])+'</span><b>福岡市'+esc(String(x['エリア（区）']||'').replace(/^福岡市/,''))+'</b>'+
+      '<p class="wp">'+esc(x['価格帯（例：1,000万円台）'])+(sp?'<small>'+esc(sp)+'</small>':'')+'</p>'+
+      (x['ひとこと（例：入居者付きのまま2か月で成約）']?'<p>'+esc(x['ひとこと（例：入居者付きのまま2か月で成約）'])+'</p>':'')+
+      '<span class="pm">'+esc(x['成約年月'])+' 成約'+(x['売却までの期間']?'｜売却まで '+esc(x['売却までの期間']):'')+'</span></div>'}).join('');show('#works-sec')}
+    var L=d.listings||[],lg=document.getElementById('listings');
+    if(lg&&L.length){var lim=Number(lg.dataset.limit||0),line='https://line.me/R/oaMessage/@927bbokx/?';
+      lg.innerHTML=(lim?L.slice(0,lim):L).map(function(x){
+        var sp=[x.layout,x.area?x.area+'㎡':'',x.built?x.built+'築':''].filter(Boolean).join('｜');
+        var msg='【物件のお問い合わせ】\n'+x.name+'（'+x.addr+'・'+x.price+'万円）\nについて詳しく知りたいです。';
+        return '<article class="lc"><div class="lph">'+(x.imgs&&x.imgs[0]?'<img src="'+esc(x.imgs[0])+'" alt="'+esc(x.name)+'の写真" loading="lazy">':'<span class="noimg">写真準備中</span>')+'<span class="lt">'+esc(x.type)+'</span></div>'+
+          '<div class="lb"><h3>'+esc(x.name)+'</h3><p class="lpr"><b>'+Number(x.price).toLocaleString()+'</b>万円'+(x.yield?'<span class="ly">利回り '+esc(x.yield)+'%</span>':'')+'</p>'+
+          '<p class="la">'+esc(x.addr)+(x.access?'<br>'+esc(x.access):'')+'</p>'+(sp?'<p class="ls">'+esc(sp)+'</p>':'')+(x.note?'<p class="ln">'+esc(x.note)+'</p>':'')+
+          '<p class="ld">取引態様：'+esc(x.deal||'媒介')+'｜情報確認日 '+esc(x.checked)+'｜次回更新予定 '+esc(x.next)+'</p>'+
+          '<a class="btn btn-line lbtn" href="'+line+encodeURIComponent(msg)+'" target="_blank" rel="noopener">LINEで問い合わせる</a></div></article>'}).join('');
+      var lc=document.getElementById('listings-count');if(lc)lc.textContent='掲載中 '+L.length+'件';
+      show('#listings-sec')}
     var v=document.getElementById('voices');
     if(v&&(d.voices||[]).length){v.innerHTML=d.voices.slice(0,4).map(function(x){return '<figure class="vc"><blockquote>'+esc(x['声（ご本人の言葉のまま。掲載の許可をもらうこと）'])+'</blockquote><figcaption>'+esc(x['お名前の表示（例：中央区 40代 K様）'])+'｜'+esc(x['種類'])+'</figcaption></figure>'}).join('');show('#voices-sec')}
     var b=document.getElementById('buyers');
     if(b&&(d.buyers||[]).length){var bc=document.getElementById('buyers-count');if(bc)bc.textContent='掲載中 '+d.buyers.length+'件（'+new Date().toLocaleDateString('ja-JP')+' 現在）';b.innerHTML=d.buyers.slice(0,8).map(function(x){return '<div class="by"><b>'+esc(x['探しているエリア'])+'で'+esc(x['種類'])+'</b><span>予算 '+esc(x['予算'])+'</span><p>'+esc(x['条件・ひとこと'])+'</p></div>'}).join('');show('#buyers-sec')}
   }).catch(function(){});
+})();
+
+/* ===== 売り方診断 ===== */
+(function(){
+  var box=document.getElementById('shindan');if(!box)return;
+  var Q=[['いつまでに売りたいですか？',[['3か月以内',2],['半年〜1年くらい',0],['まだ決めていない',-1]]],
+         ['いちばん大事なことは？',[['少しでも高く売りたい',-2],['早く確実に売りたい',2],['近所に知られたくない',2]]],
+         ['物件の状態は？',[['きれい・住んでいる',-1],['古い・片付けや修理が必要',2],['入居者がいる（投資用）',0]]]];
+  var i=0,score=0,h=box.querySelector('.sq'),st=box.querySelector('.sstep');
+  function draw(){ if(i>=Q.length)return res(); st.textContent='質問 '+(i+1)+' / '+Q.length;
+    h.innerHTML='<p class="sqt">'+Q[i][0]+'</p>'+Q[i][1].map(function(a,k){return '<button type="button" data-k="'+k+'">'+a[0]+'</button>'}).join('');
+    [].forEach.call(h.querySelectorAll('button'),function(b){b.onclick=function(){score+=Q[i][1][b.dataset.k][1];i++;draw()}})}
+  function res(){ st.textContent='診断結果';
+    var r=score>=3?['「買取」が向いていそうです','不動産会社が直接買い取るので、早ければ数週間で現金化できます。近所に知られにくく、片付けや修理もそのままでOKです。価格は仲介より低めになるため、複数の買取会社の金額を比べてご提案します。']:
+          score<=-2?['「仲介」が向いていそうです','買主を広く探すので、時間はかかりますが高く売れる可能性があります。売れるまでの目安は3〜6か月です。まずは今の相場を知ることから始めましょう。']:
+          ['「仲介」と「買取」の両方を比べるのがおすすめです','両方の金額と売れるまでの期間を並べて比べると、納得して選べます。OLD wideでは無料査定で両方の目安をお出しします。'];
+    h.innerHTML='<p class="sqt">'+r[0]+'</p><p class="sres">'+r[1]+'</p><a class="btn btn-o" href="#satei-sec">無料で両方の金額を調べる</a><button type="button" class="sre">もう一度</button>';
+    h.querySelector('.sre').onclick=function(){i=0;score=0;draw()}}
+  draw();
+})();
+/* ===== 手取り計算 ===== */
+(function(){
+  var f=document.getElementById('tedori');if(!f)return;
+  function n(id){return Number(String(f.querySelector('#'+id).value).replace(/[^\d.]/g,''))||0}
+  function inshi(p){p*=10000;return p<=1e5?0:p<=5e5?200:p<=1e6?500:p<=5e6?1000:p<=1e7?5000:p<=5e7?10000:p<=1e8?30000:p<=5e8?60000:160000}
+  function fee(p){var y=p*10000,b=y<=2e6?y*.05:y<=4e6?y*.04+2e4:y*.03+6e4;if(y<=8e6)b=Math.min(Math.max(b,0),300000);return Math.round(b*1.1)}
+  function calc(){var p=n('tp'),z=n('tz');var out=f.querySelector('.tout');if(!p){out.hidden=true;return}
+    var a=fee(p),b=inshi(p),c=z>0?20000:0,t=p*10000-a-b-c-z*10000,yen=function(v){return Math.round(v/10000).toLocaleString()+'万円'};
+    var y=function(v){return v.toLocaleString()+'円'};
+    out.innerHTML='<table><tr><th>売れた価格</th><td>'+yen(p*10000)+'</td></tr><tr><th>仲介手数料（税込・上限）</th><td>− '+y(a)+'</td></tr><tr><th>売買契約書の印紙代</th><td>− '+y(b)+'</td></tr>'+(z?'<tr><th>ローン完済（残高）</th><td>− '+yen(z*10000)+'</td></tr><tr><th>抵当権を消す登記（目安）</th><td>− '+y(c)+'</td></tr>':'')+'<tr class="tt"><th>手元に残るお金（目安）</th><td>'+yen(t)+'</td></tr></table><p class="note">※利益が出た場合の税金や、引越し・測量などの費用は含みません。正確な金額は査定のときに一緒に計算します。</p>';
+    out.hidden=false}
+  f.addEventListener('input',calc);calc();
 })();
 </script>
 </body>
