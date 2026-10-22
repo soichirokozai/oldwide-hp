@@ -1045,7 +1045,7 @@ var OW = {
       var rcard=function(x){
         var sp=[x.layout,x.area?x.area+'㎡':'',x.built?x.built+'築':''].filter(Boolean).join('｜');
         var fee=x.fee&&!/なし|^0$/.test(String(x.fee))?'管理費等 '+(isNaN(Number(x.fee))?esc(x.fee):Number(x.fee).toLocaleString()+'円'):'管理費等なし';
-        var msg='【空室確認】'+x.name+'（賃料'+x.rent+'万円）\nこのお部屋はまだ空いていますか？';
+        var msg='【空室確認】'+x.name+'（賃料'+x.rent+'万円）\nこちらのお部屋はまだ空いていますか？\nお名前：\n電話番号：\nご希望の内見日：';
         var tags=String(x.tags||'').split(/[、,\s]+/).filter(Boolean).slice(0,4).map(function(t){return '<span>'+esc(t)+'</span>'}).join('');
         var link=x.suumo?'<a class="btn btn-ghost lbtn2" href="'+esc(x.suumo)+'" target="_blank" rel="noopener">SUUMOで詳しく見る</a>':(x.athome?'<a class="btn btn-ghost lbtn2" href="'+esc(x.athome)+'" target="_blank" rel="noopener">写真・詳細をもっと見る</a>':'');
         return '<article class="lc rc"><div class="lph">'+(x.imgs&&x.imgs[0]?'<img src="'+esc(x.imgs[0])+'" alt="'+esc(x.name)+'の写真" loading="lazy" referrerpolicy="no-referrer">':'<span class="noimg">写真準備中</span>')+'<span class="lt">'+esc(x.type||'賃貸')+'</span>'+(x.imgs&&x.imgs.length>1?'<span class="pcnt">写真 '+x.imgs.length+'枚</span>':'')+'</div>'+
