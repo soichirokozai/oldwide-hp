@@ -609,7 +609,8 @@ var OW = {
       '<p class="wp">'+esc(x['価格帯（例：1,000万円台）'])+(sp?'<small>'+esc(sp)+'</small>':'')+'</p>'+
       (x['ひとこと（例：入居者付きのまま2か月で成約）']?'<p>'+esc(x['ひとこと（例：入居者付きのまま2か月で成約）'])+'</p>':'')+
       '<span class="pm">'+esc(x['成約年月'])+' 成約'+(x['売却までの期間']?'｜売却まで '+esc(x['売却までの期間']):'')+'</span></div>'}).join('');show('#works-sec')}
-    var L=d.listings||[],lg=document.getElementById('listings');
+    var ORD=['マンション','一戸建て','土地','投資用マンション','一棟アパート・マンション'];
+    var L=(d.listings||[]).slice().sort(function(a,b){var x=ORD.indexOf(a.type),y=ORD.indexOf(b.type);return (x<0?9:x)-(y<0?9:y)}),lg=document.getElementById('listings');
     if(lg&&L.length){var lim=Number(lg.dataset.limit||0);
       var TABS=[['all','すべて'],['マンション','マンション'],['投資用マンション','投資用'],['一戸建て','一戸建て'],['土地','土地'],['一棟アパート・マンション','一棟']];
       var cardOf=function(x){
