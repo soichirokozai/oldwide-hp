@@ -444,6 +444,25 @@ footer .cp{grid-column:1/-1;font-size:12px;opacity:.7;border-top:1px solid rgba(
 .modal{z-index:1000}
 .mbox .f{display:block}.mbox .f .rq{display:inline-block;width:auto;margin-left:8px}.mbox .f .opt{margin-left:8px}
 .mbox .f input,.mbox .f select,.mbox .f textarea{display:block;margin-top:6px}
+
+.rc .lbtn2{margin-top:8px;width:100%;justify-content:center}
+.rc .btn-line{width:100%;justify-content:center}
+.pcnt{position:absolute;right:10px;bottom:10px;background:rgba(27,44,72,.78);color:#fff;font-size:12px;border-radius:6px;padding:2px 8px}
+.rtags{display:flex;flex-wrap:wrap;gap:6px;margin:6px 0 0}.rtags span{font-size:12px;background:#fff4e8;color:#b85a00;border-radius:999px;padding:2px 10px}
+.btn-ghost{background:#fff;color:var(--navy);border:2px solid var(--sky2)}
+.chintai-hero{background:linear-gradient(135deg,#fff4e8,#eaf4fb);padding:40px 0 28px}
+.chintai-hero h1{font-size:clamp(26px,4.5vw,40px);margin:6px 0 10px;line-height:1.35}
+.chintai-hero p{margin:0 0 16px;color:var(--sub)}
+.cpts{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px;margin-top:18px}
+.cpts div{background:#fff;border-radius:12px;padding:14px 16px;border:1px solid var(--line)}
+.cpts b{display:block;color:var(--navy);margin-bottom:4px}
+.cpts p{margin:0;font-size:14px;color:var(--sub)}
+.cflow{counter-reset:f;display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:14px;list-style:none;padding:0}
+.cflow li{background:#fff;border:1px solid var(--line);border-radius:12px;padding:16px;position:relative}
+.cflow li:before{counter-increment:f;content:counter(f);display:inline-grid;place-items:center;width:28px;height:28px;border-radius:50%;background:var(--orange);color:#fff;font-weight:700;margin-bottom:6px}
+.cflow b{display:block;color:var(--navy)}
+.cflow p{margin:4px 0 0;font-size:14px;color:var(--sub)}
+.l2more{display:block;margin-top:10px;font-weight:700;color:var(--orange-d)}
 </style>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "RealEstateAgent", "name": "株式会社OLD wide", "alternateName": ["OLD wide", "福岡不動産wide", "福岡不動産ワイド"], "url": "https://www.oldwide.jp/", "telephone": "+81-92-791-4516", "faxNumber": "+81-92-791-4517", "address": {"@type": "PostalAddress", "postalCode": "810-0011", "addressRegion": "福岡県", "addressLocality": "福岡市中央区", "streetAddress": "高砂1丁目1-25 ニューガイアオフィス天神", "addressCountry": "JP"}, "geo": {"@type": "GeoCoordinates", "latitude": 33.581964, "longitude": 130.4056}, "openingHoursSpecification": [{"@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"], "opens": "10:00", "closes": "18:00"}], "areaServed": [{"@type": "City", "name": "福岡市"}], "founder": {"@type": "Person", "name": "古財 宗一郎"}, "sameAs": ["https://www.instagram.com/oldwide.inc/"]}</script>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "トップ", "item": "https://www.oldwide.jp/"}, {"@type": "ListItem", "position": 2, "name": "販売物件", "item": "https://www.oldwide.jp/bukken.html"}]}</script>
@@ -452,7 +471,7 @@ footer .cp{grid-column:1/-1;font-size:12px;opacity:.7;border-top:1px solid rgba(
 <header>
   <div class="wrap">
     <a class="logo" href="index.html"><b>福岡不動産<span>wide</span></b><small>運営：株式会社OLD wide｜売買・賃貸</small></a>
-    <nav class="gn" aria-label="メニュー"><a href="bukken.html">販売物件</a><a href="index.html#types">種類別の査定</a><a href="blog.html">コラム</a><a href="index.html#area">エリア</a><a href="index.html#staff">担当者</a><a href="index.html#faq">よくある質問</a><a href="index.html#company">会社概要</a></nav>
+    <nav class="gn" aria-label="メニュー"><a href="bukken.html">販売物件</a><a href="chintai.html">賃貸物件</a><a href="index.html#types">種類別の査定</a><a href="blog.html">コラム</a><a href="index.html#area">エリア</a><a href="index.html#staff">担当者</a><a href="index.html#faq">よくある質問</a><a href="index.html#company">会社概要</a></nav>
     <div class="htel"><a href="tel:0927914516" style="text-decoration:none;color:inherit"><b class="tnum">092-791-4516</b></a><small>受付 10:00〜18:00（不定休）</small></div>
     <a class="btn btn-o" href="#satei-sec">無料査定</a>
   </div>
@@ -711,6 +730,31 @@ var OW = {
       draw('all');
       var lc=document.getElementById('listings-count');if(lc)lc.textContent='掲載中 '+L.length+'件';
       show('#listings-sec')}
+    var R=d.rentals||[],rg=document.getElementById('rentals');
+    if(rg&&R.length){var rlim=Number(rg.dataset.limit||0),LR='@353pqrxu';
+      var RT=[['all','すべて',function(){return true}],['one','一人暮らし（1R〜1LDK）',function(x){return /^(1|ワンルーム)/.test(x.layout||'')}],['fam','ファミリー（2LDK〜）',function(x){return /^[2-9]/.test(x.layout||'')}],['house','一戸建て',function(x){return /戸建/.test(x.type||'')}],['pet','ペット相談',function(x){return /ペット/.test(x.tags||'')}]];
+      var man=function(v){var n=Number(v);return isNaN(n)?esc(v):(n%1?n.toFixed(1):n)};
+      var rcard=function(x){
+        var sp=[x.layout,x.area?x.area+'㎡':'',x.built?x.built+'築':''].filter(Boolean).join('｜');
+        var fee=x.fee&&!/なし|^0$/.test(String(x.fee))?'管理費等 '+(isNaN(Number(x.fee))?esc(x.fee):Number(x.fee).toLocaleString()+'円'):'管理費等なし';
+        var msg='【空室確認】'+x.name+'（賃料'+x.rent+'万円）\nこちらのお部屋はまだ空いていますか？\nお名前：\n電話番号：\nご希望の内見日：';
+        var tags=String(x.tags||'').split(/[、,\s]+/).filter(Boolean).slice(0,4).map(function(t){return '<span>'+esc(t)+'</span>'}).join('');
+        var link=x.suumo?'<a class="btn btn-ghost lbtn2" href="'+esc(x.suumo)+'" target="_blank" rel="noopener">SUUMOで詳しく見る</a>':(x.athome?'<a class="btn btn-ghost lbtn2" href="'+esc(x.athome)+'" target="_blank" rel="noopener">写真・詳細をもっと見る</a>':'');
+        return '<article class="lc rc"><div class="lph">'+(x.imgs&&x.imgs[0]?'<img src="'+esc(x.imgs[0])+'" alt="'+esc(x.name)+'の写真" loading="lazy" referrerpolicy="no-referrer">':'<span class="noimg">写真準備中</span>')+'<span class="lt">'+esc(x.type||'賃貸')+'</span>'+(x.imgs&&x.imgs.length>1?'<span class="pcnt">写真 '+x.imgs.length+'枚</span>':'')+'</div>'+
+          '<div class="lb"><h3>'+esc(x.name)+'</h3><p class="lpr"><b>'+man(x.rent)+'</b>万円<span class="ly">'+fee+'</span></p>'+
+          '<p class="ls">敷金 '+esc(x.shiki||'-')+'／礼金 '+esc(x.rei||'-')+'</p>'+
+          '<p class="la">'+esc(x.addr)+(x.access?'<br>'+esc(x.access):'')+'</p>'+(sp?'<p class="ls">'+esc(sp)+(x.move?'｜入居 '+esc(x.move):'')+'</p>':'')+(tags?'<p class="rtags">'+tags+'</p>':'')+(x.note?'<p class="ln">'+esc(x.note)+'</p>':'')+
+          '<p class="ld">取引態様：仲介｜情報確認日 '+esc(x.checked)+'｜次回更新予定 '+esc(x.next)+'</p>'+
+          '<a class="btn btn-line lbtn" href="https://line.me/R/oaMessage/'+LR+'/?'+encodeURIComponent(msg)+'" target="_blank" rel="noopener">LINEで空室確認・内見予約</a>'+link+'</div></article>'};
+      var rdraw=function(k){var f=RT.filter(function(t){return t[0]===k})[0][2],arr=R.filter(f);rg.innerHTML=(rlim?arr.slice(0,rlim):arr).map(rcard).join('')||'<p class="note">この条件の物件は、ただいま掲載がありません。LINEでご希望をお送りいただければお探しします。</p>'};
+      var rt=document.getElementById('rtabs');
+      if(rt){var rh=RT.filter(function(t){return t[0]==='all'||R.some(t[2])});
+        rt.innerHTML=rh.map(function(t,i){return '<button type="button" class="'+(i?'':'on')+'" data-t="'+t[0]+'">'+t[1]+'</button>'}).join('');
+        rt.onclick=function(e){var b=e.target.closest('button');if(!b)return;[].forEach.call(rt.children,function(c){c.classList.toggle('on',c===b)});rdraw(b.dataset.t)}}
+      rdraw('all');
+      var rc=document.getElementById('rentals-count');if(rc)rc.textContent='掲載中 '+R.length+'件（3日ごとに空室を確認しています）';
+      show('#rentals-sec')}
+    if(d.suumoShop){[].forEach.call(document.querySelectorAll('.suumo-shop'),function(a){a.href=d.suumoShop;a.hidden=false})}
     var v=document.getElementById('voices');
     if(v&&(d.voices||[]).length){v.innerHTML=d.voices.slice(0,4).map(function(x){return '<figure class="vc"><blockquote>'+esc(x['声（ご本人の言葉のまま。掲載の許可をもらうこと）'])+'</blockquote><figcaption>'+esc(x['お名前の表示（例：中央区 40代 K様）'])+'｜'+esc(x['種類'])+'</figcaption></figure>'}).join('');show('#voices-sec')}
     var b=document.getElementById('buyers');
