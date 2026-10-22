@@ -465,6 +465,9 @@ footer .cp{grid-column:1/-1;font-size:12px;opacity:.7;border-top:1px solid rgba(
 .l2more{display:block;margin-top:10px;font-weight:700;color:var(--orange-d)}
 .suumo-shop[hidden]{display:none!important}
 .staffs.one{grid-template-columns:1fr;max-width:860px;margin:0 auto}
+.shopbox{background:#fff4e8;border:2px solid #ffd4a8;border-radius:14px;padding:18px 20px;text-align:center;margin:0 auto 24px;max-width:860px}
+.shopbox b{display:block;color:var(--navy);font-size:17px}.shopbox p{margin:6px 0 12px;color:var(--sub);font-size:14px}
+.shopbtns{display:flex;gap:10px;justify-content:center;flex-wrap:wrap}.shopbox[hidden],.shopbtns a[hidden]{display:none!important}
 </style>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "RealEstateAgent", "name": "株式会社OLD wide", "alternateName": ["OLD wide", "福岡不動産wide", "福岡不動産ワイド"], "url": "https://www.oldwide.jp/", "telephone": "+81-92-791-4516", "faxNumber": "+81-92-791-4517", "address": {"@type": "PostalAddress", "postalCode": "810-0011", "addressRegion": "福岡県", "addressLocality": "福岡市中央区", "streetAddress": "高砂1丁目1-25 ニューガイアオフィス天神", "addressCountry": "JP"}, "geo": {"@type": "GeoCoordinates", "latitude": 33.581964, "longitude": 130.4056}, "openingHoursSpecification": [{"@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"], "opens": "10:00", "closes": "18:00"}], "areaServed": [{"@type": "City", "name": "福岡市"}], "founder": {"@type": "Person", "name": "古財 宗一郎"}, "sameAs": ["https://www.instagram.com/oldwide.inc/"]}</script>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "トップ", "item": "https://www.oldwide.jp/"}, {"@type": "ListItem", "position": 2, "name": "賃貸物件", "item": "https://www.oldwide.jp/chintai.html"}]}</script>
@@ -484,7 +487,7 @@ footer .cp{grid-column:1/-1;font-size:12px;opacity:.7;border-top:1px solid rgba(
 <section class="chintai-hero"><div class="wrap">
 <span class="en" style="color:var(--orange-d);font-weight:700;letter-spacing:.1em">FOR RENT</span>
 <h1>福岡市の<span class="mk">賃貸物件</span>・お部屋探し</h1>
-<p>福岡不動産wide（株式会社OLD wide）がご紹介できる、福岡市内の募集中のお部屋です。気になるお部屋は「LINEで空室確認・内見予約」から、そのまま送るだけ。</p>
+<p>福岡市内のお部屋探しは福岡不動産wide（株式会社OLD wide）へ。気になるお部屋は「LINEで空室確認・内見予約」から、そのまま送るだけ。</p>
 <a class="btn btn-line" href="https://line.me/R/ti/p/@353pqrxu" target="_blank" rel="noopener">賃貸のLINEを追加して相談する</a>
 <div class="cpts">
 <div><b>初期費用のご相談も</b><p>敷金・礼金や入居日のご希望など、気になることはLINEでお気軽にご相談ください。</p></div>
@@ -492,11 +495,12 @@ footer .cp{grid-column:1/-1;font-size:12px;opacity:.7;border-top:1px solid rgba(
 <div><b>内見・ご契約まで同じ担当</b><p>お問い合わせからご入居まで、ひとりの担当が責任を持ってご案内します。</p></div>
 </div></div></section>
 <section class="sec" id="rentals-sec"><div class="wrap">
-<div class="ttl"><span class="en">ROOMS</span><h2>募集中の<span class="mk">お部屋</span></h2><p class="pm" id="rentals-count"></p></div>
-<div class="ltabs" id="rtabs"></div>
-<div class="listings" id="rentals"><p>物件を読み込んでいます…</p></div>
+<div class="ttl"><span class="en">ROOMS</span><h2>おすすめの<span class="mk">お部屋</span></h2><p>ご紹介できるお部屋の一部です。</p></div>
+<div class="shopbox" hidden><b>福岡不動産wideが掲載中のお部屋は、ほかにもたくさんあります</b><p>アットホーム・SUUMOで、弊社が掲載しているお部屋をまとめてご覧いただけます。</p><div class="shopbtns"><a class="btn btn-o athome-shop" href="#" target="_blank" rel="noopener" hidden>アットホームで弊社の物件を見る</a><a class="btn btn-o suumo-shop" href="#" target="_blank" rel="noopener" hidden>SUUMOで弊社の物件を見る</a></div></div>
+<div class="listings" id="rentals" data-limit="6"><p>物件を読み込んでいます…</p></div>
 <p class="note">※掲載情報は情報確認日時点のものです。タイミングによってはお申し込みが入っている場合がありますので、必ずLINEで空室をご確認ください。賃料・管理費等は税込表示です。</p>
-<div style="text-align:center;margin-top:20px;display:flex;gap:12px;justify-content:center;flex-wrap:wrap"><a class="btn btn-line" href="https://line.me/R/ti/p/@353pqrxu" target="_blank" rel="noopener">LINEで希望条件を送る</a><a class="btn btn-ghost suumo-shop" href="#" target="_blank" rel="noopener" hidden>SUUMOで掲載中のお部屋も見る</a></div>
+<div class="shopbox" hidden><b>福岡不動産wideが掲載中のお部屋は、ほかにもたくさんあります</b><p>アットホーム・SUUMOで、弊社が掲載しているお部屋をまとめてご覧いただけます。</p><div class="shopbtns"><a class="btn btn-o athome-shop" href="#" target="_blank" rel="noopener" hidden>アットホームで弊社の物件を見る</a><a class="btn btn-o suumo-shop" href="#" target="_blank" rel="noopener" hidden>SUUMOで弊社の物件を見る</a></div></div>
+<div style="text-align:center;margin-top:20px"><a class="btn btn-line" href="https://line.me/R/ti/p/@353pqrxu" target="_blank" rel="noopener">LINEで希望条件を送る（お探しします）</a></div>
 </div></section>
 <section class="sec"><div class="wrap">
 <div class="ttl"><span class="en">STAFF</span><h2>お部屋探しの<span class="mk">担当者</span></h2></div>
@@ -696,7 +700,9 @@ var OW = {
       rdraw('all');
       var rc=document.getElementById('rentals-count');if(rc)rc.textContent='掲載中 '+R.length+'件';
       show('#rentals-sec')}
-    if(d.suumoShop){[].forEach.call(document.querySelectorAll('.suumo-shop'),function(a){a.href=d.suumoShop;a.hidden=false})}
+    var shops=[['suumo',d.suumoShop],['athome',d.athomeShop]].filter(function(x){return x[1]});
+    shops.forEach(function(x){[].forEach.call(document.querySelectorAll('.'+x[0]+'-shop'),function(a){a.href=x[1];a.hidden=false})});
+    if(shops.length)[].forEach.call(document.querySelectorAll('.shopbox'),function(b){b.hidden=false});
     var v=document.getElementById('voices');
     if(v&&(d.voices||[]).length){v.innerHTML=d.voices.slice(0,4).map(function(x){return '<figure class="vc"><blockquote>'+esc(x['声（ご本人の言葉のまま。掲載の許可をもらうこと）'])+'</blockquote><figcaption>'+esc(x['お名前の表示（例：中央区 40代 K様）'])+'｜'+esc(x['種類'])+'</figcaption></figure>'}).join('');show('#voices-sec')}
     var b=document.getElementById('buyers');

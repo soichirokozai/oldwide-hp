@@ -465,6 +465,9 @@ footer .cp{grid-column:1/-1;font-size:12px;opacity:.7;border-top:1px solid rgba(
 .l2more{display:block;margin-top:10px;font-weight:700;color:var(--orange-d)}
 .suumo-shop[hidden]{display:none!important}
 .staffs.one{grid-template-columns:1fr;max-width:860px;margin:0 auto}
+.shopbox{background:#fff4e8;border:2px solid #ffd4a8;border-radius:14px;padding:18px 20px;text-align:center;margin:0 auto 24px;max-width:860px}
+.shopbox b{display:block;color:var(--navy);font-size:17px}.shopbox p{margin:6px 0 12px;color:var(--sub);font-size:14px}
+.shopbtns{display:flex;gap:10px;justify-content:center;flex-wrap:wrap}.shopbox[hidden],.shopbtns a[hidden]{display:none!important}
 </style>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "RealEstateAgent", "name": "株式会社OLD wide", "alternateName": ["OLD wide", "福岡不動産wide", "福岡不動産ワイド"], "url": "https://www.oldwide.jp/", "telephone": "+81-92-791-4516", "faxNumber": "+81-92-791-4517", "address": {"@type": "PostalAddress", "postalCode": "810-0011", "addressRegion": "福岡県", "addressLocality": "福岡市中央区", "streetAddress": "高砂1丁目1-25 ニューガイアオフィス天神", "addressCountry": "JP"}, "geo": {"@type": "GeoCoordinates", "latitude": 33.581964, "longitude": 130.4056}, "openingHoursSpecification": [{"@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"], "opens": "10:00", "closes": "18:00"}], "areaServed": [{"@type": "City", "name": "福岡市"}], "founder": {"@type": "Person", "name": "古財 宗一郎"}, "sameAs": ["https://www.instagram.com/oldwide.inc/"]}</script>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "西区以外の物件も査定できますか？", "acceptedAnswer": {"@type": "Answer", "text": "できます。福岡市内のほかの区や、福岡県内の物件もご相談ください。"}}, {"@type": "Question", "name": "査定をお願いしたら、必ず売らないといけませんか？", "acceptedAnswer": {"@type": "Answer", "text": "いいえ、売らなくても大丈夫です。査定は無料で、結果を見てお断りいただいても費用はかかりません。"}}, {"@type": "Question", "name": "しつこく営業の電話がかかってきませんか？", "acceptedAnswer": {"@type": "Answer", "text": "ご希望しない連絡はいたしません。「メールのみ」を選んでいただければ、結果はメールだけでお送りします。"}}, {"@type": "Question", "name": "本当に1〜3日で結果が出ますか？", "acceptedAnswer": {"@type": "Answer", "text": "机上査定（資料による査定）なら、最短1日、遅くとも3営業日以内にお知らせします。お部屋や建物を実際に見る訪問査定をご希望の場合は、日程を調整してから結果をお伝えします。"}}, {"@type": "Question", "name": "近所や入居者に知られずに売れますか？", "acceptedAnswer": {"@type": "Answer", "text": "できます。広告を出さずに、購入を希望している方や不動産会社にだけご紹介する方法があります。"}}]}</script>
@@ -833,7 +836,9 @@ var OW = {
       rdraw('all');
       var rc=document.getElementById('rentals-count');if(rc)rc.textContent='掲載中 '+R.length+'件';
       show('#rentals-sec')}
-    if(d.suumoShop){[].forEach.call(document.querySelectorAll('.suumo-shop'),function(a){a.href=d.suumoShop;a.hidden=false})}
+    var shops=[['suumo',d.suumoShop],['athome',d.athomeShop]].filter(function(x){return x[1]});
+    shops.forEach(function(x){[].forEach.call(document.querySelectorAll('.'+x[0]+'-shop'),function(a){a.href=x[1];a.hidden=false})});
+    if(shops.length)[].forEach.call(document.querySelectorAll('.shopbox'),function(b){b.hidden=false});
     var v=document.getElementById('voices');
     if(v&&(d.voices||[]).length){v.innerHTML=d.voices.slice(0,4).map(function(x){return '<figure class="vc"><blockquote>'+esc(x['声（ご本人の言葉のまま。掲載の許可をもらうこと）'])+'</blockquote><figcaption>'+esc(x['お名前の表示（例：中央区 40代 K様）'])+'｜'+esc(x['種類'])+'</figcaption></figure>'}).join('');show('#voices-sec')}
     var b=document.getElementById('buyers');
