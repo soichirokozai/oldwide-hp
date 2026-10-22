@@ -636,7 +636,7 @@ var OW = {
       var cardOf=function(x){
         var sp=[x.layout,x.area?x.area+'㎡':'',x.built?(x.masked?x.built:x.built+'築'):''].filter(Boolean).join('｜');
         var price=x.masked?'<b>'+esc(x.band)+'</b>':'<b>'+Number(x.price).toLocaleString()+'</b>万円';
-        var ph=x.masked?'<span class="noimg lock">詳細は資料請求の方のみ<br>ご案内しています</span>':(x.imgs&&x.imgs[0]?'<img src="'+esc(x.imgs[0])+'" alt="'+esc(x.name)+'の写真" loading="lazy">':'<span class="noimg">写真準備中</span>');
+        var ph=x.masked?'<span class="noimg lock">詳細は資料請求の方のみ<br>ご案内しています</span>':(x.imgs&&x.imgs[0]?'<img src="'+esc(x.imgs[0])+'" alt="'+esc(x.name)+'の写真" loading="lazy" referrerpolicy="no-referrer">':'<span class="noimg">写真準備中</span>');
         return '<article class="lc'+(x.masked?' msk':'')+'" data-type="'+esc(x.type)+'"><div class="lph">'+ph+'<span class="lt">'+esc(x.type)+'</span></div>'+
           '<div class="lb"><h3>'+esc(x.name)+'</h3><p class="lpr">'+price+(x.yield?'<span class="ly">利回り '+esc(x.yield)+'%</span>':'')+'</p>'+
           '<p class="la">'+esc(x.addr)+(x.access?'<br>'+esc(x.access):'')+'</p>'+(sp?'<p class="ls">'+esc(sp)+'</p>':'')+(x.note?'<p class="ln">'+esc(x.note)+'</p>':'')+
