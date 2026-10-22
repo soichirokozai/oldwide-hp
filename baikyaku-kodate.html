@@ -827,7 +827,7 @@ var OW = {
         rt.innerHTML=rh.map(function(t,i){return '<button type="button" class="'+(i?'':'on')+'" data-t="'+t[0]+'">'+t[1]+'</button>'}).join('');
         rt.onclick=function(e){var b=e.target.closest('button');if(!b)return;[].forEach.call(rt.children,function(c){c.classList.toggle('on',c===b)});rdraw(b.dataset.t)}}
       rdraw('all');
-      var rc=document.getElementById('rentals-count');if(rc)rc.textContent='掲載中 '+R.length+'件（3日ごとに空室を確認しています）';
+      var rc=document.getElementById('rentals-count');if(rc)rc.textContent='掲載中 '+R.length+'件';
       show('#rentals-sec')}
     if(d.suumoShop){[].forEach.call(document.querySelectorAll('.suumo-shop'),function(a){a.href=d.suumoShop;a.hidden=false})}
     var v=document.getElementById('voices');
