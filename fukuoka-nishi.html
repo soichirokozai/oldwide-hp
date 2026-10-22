@@ -468,6 +468,7 @@ footer .cp{grid-column:1/-1;font-size:12px;opacity:.7;border-top:1px solid rgba(
 .shopbox{background:#fff4e8;border:2px solid #ffd4a8;border-radius:14px;padding:18px 20px;text-align:center;margin:0 auto 24px;max-width:860px}
 .shopbox b{display:block;color:var(--navy);font-size:17px}.shopbox p{margin:6px 0 12px;color:var(--sub);font-size:14px}
 .shopbtns{display:flex;gap:10px;justify-content:center;flex-wrap:wrap}.shopbox[hidden],.shopbtns a[hidden]{display:none!important}
+.lc .lline{margin-top:8px;width:100%;justify-content:center}
 </style>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "RealEstateAgent", "name": "株式会社OLD wide", "alternateName": ["OLD wide", "福岡不動産wide", "福岡不動産ワイド"], "url": "https://www.oldwide.jp/", "telephone": "+81-92-791-4516", "faxNumber": "+81-92-791-4517", "address": {"@type": "PostalAddress", "postalCode": "810-0011", "addressRegion": "福岡県", "addressLocality": "福岡市中央区", "streetAddress": "高砂1丁目1-25 ニューガイアオフィス天神", "addressCountry": "JP"}, "geo": {"@type": "GeoCoordinates", "latitude": 33.581964, "longitude": 130.4056}, "openingHoursSpecification": [{"@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"], "opens": "10:00", "closes": "18:00"}], "areaServed": [{"@type": "City", "name": "福岡市"}], "founder": {"@type": "Person", "name": "古財 宗一郎"}, "sameAs": ["https://www.instagram.com/oldwide.inc/"]}</script>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "西区以外の物件も査定できますか？", "acceptedAnswer": {"@type": "Answer", "text": "できます。福岡市内のほかの区や、福岡県内の物件もご相談ください。"}}, {"@type": "Question", "name": "査定をお願いしたら、必ず売らないといけませんか？", "acceptedAnswer": {"@type": "Answer", "text": "いいえ、売らなくても大丈夫です。査定は無料で、結果を見てお断りいただいても費用はかかりません。"}}, {"@type": "Question", "name": "しつこく営業の電話がかかってきませんか？", "acceptedAnswer": {"@type": "Answer", "text": "ご希望しない連絡はいたしません。「メールのみ」を選んでいただければ、結果はメールだけでお送りします。"}}, {"@type": "Question", "name": "本当に1〜3日で結果が出ますか？", "acceptedAnswer": {"@type": "Answer", "text": "机上査定（資料による査定）なら、最短1日、遅くとも3営業日以内にお知らせします。お部屋や建物を実際に見る訪問査定をご希望の場合は、日程を調整してから結果をお伝えします。"}}, {"@type": "Question", "name": "近所や入居者に知られずに売れますか？", "acceptedAnswer": {"@type": "Answer", "text": "できます。広告を出さずに、購入を希望している方や不動産会社にだけご紹介する方法があります。"}}]}</script>
@@ -803,7 +804,7 @@ var OW = {
           '<div class="lb"><h3>'+esc(x.name)+'</h3><p class="lpr">'+price+(x.yield?'<span class="ly">利回り '+esc(x.yield)+'%</span>':'')+'</p>'+
           '<p class="la">'+esc(x.addr)+(x.access?'<br>'+esc(x.access):'')+'</p>'+(sp?'<p class="ls">'+esc(sp)+'</p>':'')+(x.note?'<p class="ln">'+esc(x.note)+'</p>':'')+
           '<p class="ld">取引態様：'+esc(x.deal||'媒介')+'｜情報確認日 '+esc(x.checked)+'｜次回更新予定 '+esc(x.next)+'</p>'+
-          '<button type="button" class="btn btn-o lbtn" data-lid="'+esc(x.id)+'" data-lname="'+esc(x.name)+'">詳しい資料をもらう（無料）</button></div></article>'};
+          '<button type="button" class="btn btn-o lbtn" data-lid="'+esc(x.id)+'" data-lname="'+esc(x.name)+'">詳しい資料をもらう（無料）</button>'+(x.masked?'':'<a class="btn btn-line lbtn lline" href="https://line.me/R/oaMessage/@927bbokx/?'+encodeURIComponent('【物件のお問い合わせ】'+x.name+'（'+Number(x.price).toLocaleString()+'万円）\nこの物件について聞きたいです。')+'" target="_blank" rel="noopener">LINEで気軽に質問する</a>')+'</div></article>'};
       var draw=function(t){var arr=L.filter(function(x){return t==='all'||x.type===t});lg.innerHTML=(lim?arr.slice(0,lim):arr).map(cardOf).join('')||'<p class="note">この種類の物件は、ただいま掲載がありません。</p>'};
       var tb=document.getElementById('ltabs');
       if(tb){var have=TABS.filter(function(t){return t[0]==='all'||L.some(function(x){return x.type===t[0]})});
@@ -819,7 +820,7 @@ var OW = {
       var rcard=function(x){
         var sp=[x.layout,x.area?x.area+'㎡':'',x.built?x.built+'築':''].filter(Boolean).join('｜');
         var fee=x.fee&&!/なし|^0$/.test(String(x.fee))?'管理費等 '+(isNaN(Number(x.fee))?esc(x.fee):Number(x.fee).toLocaleString()+'円'):'管理費等なし';
-        var msg='【空室確認】'+x.name+'（賃料'+x.rent+'万円）\nこちらのお部屋はまだ空いていますか？\nお名前：\n電話番号：\nご希望の内見日：';
+        var msg='【空室確認】'+x.name+'（賃料'+x.rent+'万円）\nこのお部屋はまだ空いていますか？';
         var tags=String(x.tags||'').split(/[、,\s]+/).filter(Boolean).slice(0,4).map(function(t){return '<span>'+esc(t)+'</span>'}).join('');
         var link=x.suumo?'<a class="btn btn-ghost lbtn2" href="'+esc(x.suumo)+'" target="_blank" rel="noopener">SUUMOで詳しく見る</a>':(x.athome?'<a class="btn btn-ghost lbtn2" href="'+esc(x.athome)+'" target="_blank" rel="noopener">写真・詳細をもっと見る</a>':'');
         return '<article class="lc rc"><div class="lph">'+(x.imgs&&x.imgs[0]?'<img src="'+esc(x.imgs[0])+'" alt="'+esc(x.name)+'の写真" loading="lazy" referrerpolicy="no-referrer">':'<span class="noimg">写真準備中</span>')+'<span class="lt">'+esc(x.type||'賃貸')+'</span>'+(x.imgs&&x.imgs.length>1?'<span class="pcnt">写真 '+x.imgs.length+'枚</span>':'')+'</div>'+
@@ -860,7 +861,7 @@ var OW = {
     var r=score>=3?['「買取」が向いていそうです','不動産会社が直接買い取るので、早ければ数週間で現金化できます。近所に知られにくく、片付けや修理もそのままでOKです。価格は仲介より低めになるため、複数の買取会社の金額を比べてご提案します。']:
           score<=-2?['「仲介」が向いていそうです','買主を広く探すので、時間はかかりますが高く売れる可能性があります。売れるまでの目安は3〜6か月です。まずは今の相場を知ることから始めましょう。']:
           ['「仲介」と「買取」の両方を比べるのがおすすめです','両方の金額と売れるまでの期間を並べて比べると、納得して選べます。OLD wideでは無料査定で両方の目安をお出しします。'];
-    h.innerHTML='<p class="sqt">'+r[0]+'</p><p class="sres">'+r[1]+'</p><a class="btn btn-o" href="#satei-sec">無料で両方の金額を調べる</a><button type="button" class="sre">もう一度</button>';
+    h.innerHTML='<p class="sqt">'+r[0]+'</p><p class="sres">'+r[1]+'</p><a class="btn btn-o" href="#satei-sec">無料で両方の金額を調べる</a><a class="btn btn-line" style="margin-top:8px" target="_blank" rel="noopener" href="https://line.me/R/oaMessage/@927bbokx/?'+encodeURIComponent('【売り方診断の結果】'+r[0]+'\nこの結果について相談したいです。')+'">この結果をLINEで相談する</a><button type="button" class="sre">もう一度</button>';
     h.querySelector('.sre').onclick=function(){i=0;score=0;draw()}}
   draw();
 })();
