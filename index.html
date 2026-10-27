@@ -487,6 +487,15 @@ footer .cp{grid-column:1/-1;font-size:12px;opacity:.7;border-top:1px solid rgba(
 .statgrid ul{list-style:none;margin:0;padding:0}
 .statgrid li{display:flex;justify-content:space-between;border-bottom:1px dashed #e3e8ef;padding:6px 0;font-size:14px}
 @media(max-width:640px){.stats b{font-size:26px}.statgrid{grid-template-columns:1fr}}
+.wks{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:12px;margin:8px 0 14px}
+.wk{background:#fff;border:1px solid #dfe7f0;border-radius:12px;padding:14px 16px}
+.wk-a{display:inline-block;background:#e8f1fb;color:#1d5fa8;font-size:12px;font-weight:700;padding:2px 10px;border-radius:99px;margin-bottom:6px}
+.wk b{display:block;font-size:16px;margin-bottom:2px}
+.wk p{margin:0 0 6px;font-size:14px;color:#445}
+.wk small{color:#889;font-size:12px}
+.wk .wk-a{display:inline-block!important;width:auto!important}
+@media(max-width:640px){.wks{grid-template-columns:1fr 1fr;gap:8px}.wk{padding:10px 12px}.wk b{font-size:14px}.wk p{font-size:12.5px}}
+.wk{display:flex;flex-direction:column;align-items:flex-start}.wk b,.wk p{width:100%}
 </style>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "RealEstateAgent", "name": "株式会社OLD wide", "alternateName": ["OLD wide", "福岡不動産wide", "福岡不動産ワイド"], "url": "https://www.oldwide.jp/", "telephone": "+81-92-791-4516", "faxNumber": "+81-92-791-4517", "address": {"@type": "PostalAddress", "postalCode": "810-0011", "addressRegion": "福岡県", "addressLocality": "福岡市中央区", "streetAddress": "高砂1丁目1-25 ニューガイアオフィス天神", "addressCountry": "JP"}, "geo": {"@type": "GeoCoordinates", "latitude": 33.581964, "longitude": 130.4056}, "openingHoursSpecification": [{"@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"], "opens": "10:00", "closes": "18:00"}], "areaServed": [{"@type": "City", "name": "福岡市"}], "founder": {"@type": "Person", "name": "古財 宗一郎"}, "sameAs": ["https://www.instagram.com/oldwide.inc/"]}</script>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "査定をお願いしたら、必ず売らないといけませんか？", "acceptedAnswer": {"@type": "Answer", "text": "いいえ、売らなくても大丈夫です。査定は無料で、結果を見てお断りいただいても費用はかかりません。"}}, {"@type": "Question", "name": "しつこく営業の電話がかかってきませんか？", "acceptedAnswer": {"@type": "Answer", "text": "ご希望しない連絡はいたしません。「メールのみ」を選んでいただければ、結果はメールだけでお送りします。"}}, {"@type": "Question", "name": "本当に1〜3日で結果が出ますか？", "acceptedAnswer": {"@type": "Answer", "text": "机上査定（資料による査定）なら、最短1日、遅くとも3営業日以内にお知らせします。お部屋や建物を実際に見る訪問査定をご希望の場合は、日程を調整してから結果をお伝えします。"}}, {"@type": "Question", "name": "近所や入居者に知られずに売れますか？", "acceptedAnswer": {"@type": "Answer", "text": "できます。広告を出さずに、購入を希望している方や不動産会社にだけご紹介する方法があります。"}}, {"@type": "Question", "name": "住みながら売ることはできますか？", "acceptedAnswer": {"@type": "Answer", "text": "できます。内覧の日時はご都合に合わせて調整します。住み替えの場合は、引越しと引渡しの時期を合わせて計画します。"}}, {"@type": "Question", "name": "相続の手続きが終わっていなくても相談できますか？", "acceptedAnswer": {"@type": "Answer", "text": "ご相談いただけます。売るためには相続登記（名義の変更）が必要です。2024年4月から相続登記は義務になりました。司法書士と連携して、手続きの順番からご案内します。"}}]}</script>
@@ -613,16 +622,9 @@ footer .cp{grid-column:1/-1;font-size:12px;opacity:.7;border-top:1px solid rgba(
 <div data-feed hidden></div>
 <section class="sec" id="works-sec">
   <div class="wrap">
-    <div class="ttl"><span class="en">RESULTS</span><h2>OLD wideの<span class="mk">成約実績</span></h2><p>2026年の実績です（10月末時点・契約済みを含む）。お客様のプライバシーを守るため、件数のみ載せています。</p></div>
-    <div class="stats">
-      <div><b>15<small>件</small></b><span>売買の成約</span></div>
-      <div><b>3<small>億円超</small></b><span>売買取扱額</span></div>
-      <div><b>26<small>件</small></b><span>賃貸の成約</span></div>
-    </div>
-    <div class="statgrid">
-      <div><h3>種類別（売買）</h3><ul><li><span>投資用マンション</span><b>12件</b></li><li><span>居住用マンション</span><b>2件</b></li><li><span>土地</span><b>1件</b></li></ul></div>
-      <div><h3>エリア別（売買）</h3><ul><li><span>中央区</span><b>5件</b></li><li><span>東区</span><b>3件</b></li><li><span>博多区</span><b>2件</b></li><li><span>城南区</span><b>2件</b></li><li><span>早良区・南区</span><b>各1件</b></li><li><span>福岡県外（東京都）</span><b>1件</b></li></ul></div>
-    </div>
+    <div class="ttl"><span class="en">RESULTS</span><h2>最近の<span class="mk">成約実績</span></h2><p>投資用マンションから、ご家族のお住まい、土地まで。福岡市内を中心に、さまざまな物件のお取引をお手伝いしています。</p></div>
+    <div class="wks"><div class="wk"><span class="wk-a">南区</span><b>投資用マンション</b><p>約32㎡・築17年</p><small>2026年11月 成約</small></div><div class="wk"><span class="wk-a">中央区</span><b>投資用マンション</b><p>約20㎡・築18年</p><small>2026年11月 成約</small></div><div class="wk"><span class="wk-a">早良区</span><b>中古マンション</b><p>築30年・ファミリー向け</p><small>2026年10月 成約</small></div><div class="wk"><span class="wk-a">城南区</span><b>中古マンション</b><p>約59㎡・ファミリー向け</p><small>2026年10月 成約</small></div><div class="wk"><span class="wk-a">城南区</span><b>土地（住宅用地）</b><p>住宅用地・城南区内</p><small>2026年10月 成約</small></div><div class="wk"><span class="wk-a">中央区</span><b>投資用マンション</b><p>約35㎡・築8年</p><small>2026年10月 成約</small></div><div class="wk"><span class="wk-a">東区</span><b>中古マンション</b><p>約22㎡・築30年超</p><small>2026年9月 成約</small></div><div class="wk"><span class="wk-a">博多区</span><b>投資用マンション</b><p>約22㎡・ワンルーム</p><small>2026年9月 成約</small></div><div class="wk"><span class="wk-a">中央区</span><b>投資用マンション</b><p>約29㎡・築12年</p><small>2026年9月 成約</small></div><div class="wk"><span class="wk-a">中央区</span><b>投資用マンション</b><p>約29㎡・築12年</p><small>2026年8月 成約</small></div><div class="wk"><span class="wk-a">東区</span><b>投資用マンション（2戸）</b><p>約46㎡・築20年超</p><small>2026年8月 成約</small></div><div class="wk"><span class="wk-a">東京都</span><b>投資用マンション</b><p>ワンルーム・県外物件</p><small>2026年7月 成約</small></div><div class="wk"><span class="wk-a">博多区</span><b>投資用マンション</b><p>博多駅エリア・ワンルーム</p><small>2026年5月 成約</small></div></div>
+    <p class="note" style="text-align:center">※お客様が特定されないよう、エリア・広さ・築年数などは一部まるめて表記しています。</p>
     <div class="works" id="works"></div>
   </div>
 </section>
