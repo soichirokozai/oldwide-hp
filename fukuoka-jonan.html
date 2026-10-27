@@ -538,7 +538,7 @@ footer .cp{grid-column:1/-1;font-size:12px;opacity:.7;border-top:1px solid rgba(
   <div class="wrap">
     <div class="ttl"><span class="en">SPEED</span><h2>まずは<span class="mk">価格だけ確認</span>してみませんか？</h2><p>物件の種類を選んで、かんたんな情報を入れるだけ。最短1日、遅くとも3営業日以内に結果をお知らせします。</p></div>
     <div class="typelinks">
-      <a href="baikyaku-toushi.html"><em>人気</em><b>投資用マンション</b><span>貸したままでOK。マンション名と部屋番号だけで</span></a>
+      <a href="baikyaku-toushi.html"><em>人気</em><b>中古マンション</b><span>貸したままでOK。マンション名と部屋番号だけで</span></a>
       <a href="baikyaku-mansion.html"><em>最短1日</em><b>マンション</b><span>住んでいるお部屋・空室のお部屋</span></a>
       <a href="baikyaku-kodate.html"><em>最短1日</em><b>一戸建て</b><span>古い家・空き家・相続した家も</span></a>
       <a href="baikyaku-tochi.html"><em>最短1日</em><b>土地</b><span>更地・古家付き・駐車場</span></a>
@@ -767,6 +767,13 @@ var OW = {
     }catch(e){}
   };
   owLog('pv');
+  // 期限切れ画像（アットホームの「NO PHOTO」）を差し替え
+  (function(){
+    function bad(img){var b=img.closest('.lph');if(!b)return;img.remove();var p=b.querySelector('.pcnt');if(p)p.remove();
+      if(!b.querySelector('.noimg')){var s=document.createElement('span');s.className='noimg';s.innerHTML='写真は<br>LINEでお送りします';b.insertBefore(s,b.firstChild)}}
+    document.addEventListener('load',function(e){var t=e.target;if(t.tagName==='IMG'&&t.closest&&t.closest('.lph')&&t.naturalWidth<=160&&t.naturalHeight<=160)bad(t)},true);
+    document.addEventListener('error',function(e){var t=e.target;if(t.tagName==='IMG'&&t.closest&&t.closest('.lph'))bad(t)},true);
+  })();
   document.addEventListener('click',function(e){
     var a=e.target.closest&&e.target.closest('a[href]');if(!a)return;var h=a.getAttribute('href');
     if(/oaMessage/.test(h)){var t='';try{t=decodeURIComponent(h.split('/?')[1]||'').split('\n')[0]}catch(x){}owLog(/353pqrxu/.test(h)?'line_rent':'line_q',t)}

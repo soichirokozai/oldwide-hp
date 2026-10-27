@@ -669,6 +669,13 @@ var OW = {
     }catch(e){}
   };
   owLog('pv');
+  // 期限切れ画像（アットホームの「NO PHOTO」）を差し替え
+  (function(){
+    function bad(img){var b=img.closest('.lph');if(!b)return;img.remove();var p=b.querySelector('.pcnt');if(p)p.remove();
+      if(!b.querySelector('.noimg')){var s=document.createElement('span');s.className='noimg';s.innerHTML='写真は<br>LINEでお送りします';b.insertBefore(s,b.firstChild)}}
+    document.addEventListener('load',function(e){var t=e.target;if(t.tagName==='IMG'&&t.closest&&t.closest('.lph')&&t.naturalWidth<=160&&t.naturalHeight<=160)bad(t)},true);
+    document.addEventListener('error',function(e){var t=e.target;if(t.tagName==='IMG'&&t.closest&&t.closest('.lph'))bad(t)},true);
+  })();
   document.addEventListener('click',function(e){
     var a=e.target.closest&&e.target.closest('a[href]');if(!a)return;var h=a.getAttribute('href');
     if(/oaMessage/.test(h)){var t='';try{t=decodeURIComponent(h.split('/?')[1]||'').split('\n')[0]}catch(x){}owLog(/353pqrxu/.test(h)?'line_rent':'line_q',t)}
