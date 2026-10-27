@@ -603,7 +603,7 @@ footer .cp{grid-column:1/-1;font-size:12px;opacity:.7;border-top:1px solid rgba(
 <script>/* ===== 設定（公開時に入力） ===== */
 var OW = {
   GAS_URL: "https://script.google.com/macros/s/AKfycbxpHboe2VHFm-cJUhgY4Jk3UVwmwkZZiU24eAUD8fhVGN6Q6jtRZ4ZAKe9HeOLCxBIl/exec",          // Apps Scriptの「ウェブアプリURL」を貼る
-  GA4_ID: "",           // 例: G-XXXXXXXXXX
+  GA4_ID: "G-FH35KVV58K",         // 例: G-XXXXXXXXXX
   ADS_ID: "",           // 例: AW-123456789
   ADS_LABEL: ""         // 例: AbCdEfGhIj（査定完了のコンバージョンラベル）
 };
@@ -637,6 +637,7 @@ var OW = {
     return o;
   })();
   window.owLog=function(ev,x){
+    try{if(window.gtag&&ev!=='pv')gtag('event',ev,{source:OWS.s,item:x||''})}catch(e){}
     if(!OW.GAS_URL)return;
     try{
       var b=new URLSearchParams({a:'ev',ev:ev,s:OWS.s,lp:OWS.lp,sid:OWS.sid,page:location.pathname.split('/').pop()||'index.html',dev:/Mobi|Android|iPhone/.test(navigator.userAgent)?'スマホ':'PC',x:x||''});
