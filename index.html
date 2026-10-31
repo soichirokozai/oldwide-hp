@@ -16,8 +16,8 @@
 <style>
 /* Layout: 白と空色の帯を交互に。相談ボタン（橙）と電話番号を各所にくり返し、スマホは下部固定バー */
 :root{
-  --white:#ffffff; --sky:#eaf4fb; --sky2:#d5e9f7; --blue:#1f6fb8; --blue-d:#164f86;
-  --navy:#1b2c48; --text:#2b3445; --sub:#5d6778; --line:#dbe3ec;
+  --white:#ffffff; --sky:#eaf6ee; --sky2:#d2ebda; --blue:#078d3b; --blue-d:#05692c;
+  --navy:#16362a; --text:#2b3445; --sub:#5d6778; --line:#dbe3ec;
   --orange:#ef7d1a; --orange-d:#d96b0c; --yellow:#fff4d6; --green:#06c755;
   --f-head:"Zen Maru Gothic","Hiragino Maru Gothic ProN","Yu Gothic",sans-serif;
   --f-body:"Noto Sans JP","Hiragino Kaku Gothic ProN","Yu Gothic",sans-serif;
@@ -71,7 +71,7 @@ header .btn{padding:11px 18px;font-size:15px;white-space:nowrap;flex-shrink:0}
 @media (max-width:600px){header .btn{display:none}.htel b{font-size:16px}.htel b::before{font-size:13px}.htel small{font-size:9.5px}.logo b{font-size:17px}.logo small{font-size:9px}}
 
 /* hero */
-.hero{background:linear-gradient(180deg,var(--sky) 0%,#f6fbff 100%);overflow:hidden}
+.hero{background:linear-gradient(180deg,var(--sky) 0%,#f6fbf7 100%);overflow:hidden}
 .hero .wrap{display:grid;grid-template-columns:1.05fr .95fr;gap:24px;align-items:center;padding-block:clamp(40px,6vw,72px)}
 .hero .tag{display:inline-block;background:var(--blue);color:#fff;font-family:var(--f-head);font-weight:700;font-size:14px;padding:4px 14px;border-radius:4px}
 .hero h1{font-size:clamp(30px,4.8vw,50px);font-weight:900;margin-top:16px;letter-spacing:.02em}
@@ -203,19 +203,19 @@ header .btn{padding:11px 18px;font-size:15px;white-space:nowrap;flex-shrink:0}
 .formside .tbox b{font-family:var(--f-head);font-size:30px;color:var(--navy);display:block;line-height:1.3}
 .formside .tbox small{color:var(--sub)}
 .formside .tbox .btn{margin-top:14px;width:100%}
-.qf{background:#fff;border-radius:16px;padding:28px;box-shadow:0 8px 30px rgba(27,44,72,.08);min-width:0}
+.qf{background:#fff;border-radius:16px;padding:28px;box-shadow:0 8px 30px rgba(22,54,42,.08);min-width:0}
 .steps{display:grid;grid-template-columns:repeat(3,1fr);gap:6px;margin-bottom:20px}
 .steps span{text-align:center;font-size:13px;font-weight:700;padding:8px 4px;border-radius:6px;background:var(--sky);color:var(--sub)}
 .steps span.on{background:var(--blue);color:#fff}
 fieldset{border:0;margin:0;padding:0;display:grid;gap:16px}
 .f{display:grid;gap:6px;font-weight:700;font-size:15px;color:var(--navy)}
 .f .rq{background:var(--orange);color:#fff;font-size:11px;padding:1px 7px;border-radius:3px;margin-left:8px;vertical-align:2px}
-input,select,textarea{font:inherit;font-weight:400;font-size:16px;color:var(--text);padding:12px 14px;border:2px solid var(--line);border-radius:8px;background:#fbfdff;width:100%}
+input,select,textarea{font:inherit;font-weight:400;font-size:16px;color:var(--text);padding:12px 14px;border:2px solid var(--line);border-radius:8px;background:#fbfdfc;width:100%}
 input:focus,select:focus,textarea:focus{border-color:var(--blue);outline:none}
 textarea{min-height:92px;resize:vertical}
 .chips{display:flex;flex-wrap:wrap;gap:8px}
 .chips input{position:absolute;opacity:0;width:1px;height:1px}
-.chips label{border:2px solid var(--line);border-radius:8px;padding:8px 16px;font-weight:500;font-size:15px;cursor:pointer;background:#fbfdff;color:var(--text)}
+.chips label{border:2px solid var(--line);border-radius:8px;padding:8px 16px;font-weight:500;font-size:15px;cursor:pointer;background:#fbfdfc;color:var(--text)}
 .chips input:checked+label{border-color:var(--blue);background:var(--sky);color:var(--blue);font-weight:700}
 .chips input:focus-visible+label{outline:3px solid var(--orange)}
 .err{color:#c43b1f;font-size:14px;font-weight:700;margin-top:10px}
@@ -276,7 +276,7 @@ footer .cp{grid-column:1/-1;font-size:12px;opacity:.7;border-top:1px solid rgba(
 /* 追加: 下層ページ・スピード査定 */
 .crumb{font-size:13px;color:var(--sub);padding-block:10px}
 .crumb a{color:var(--sub)}
-.lp-hero{background:linear-gradient(180deg,var(--sky) 0%,#f6fbff 100%)}
+.lp-hero{background:linear-gradient(180deg,var(--sky) 0%,#f6fbf7 100%)}
 .lp-hero .wrap{display:grid;grid-template-columns:1.1fr .9fr;gap:32px;align-items:center;padding-block:clamp(36px,5vw,64px)}
 .lp-hero h1{font-size:clamp(28px,4.4vw,44px);font-weight:900;margin-top:14px}
 .lp-hero h1 .b{color:var(--blue)}
@@ -376,7 +376,7 @@ footer .cp{grid-column:1/-1;font-size:12px;opacity:.7;border-top:1px solid rgba(
 
 /* 販売物件 */
 .listings{display:grid;grid-template-columns:repeat(auto-fill,minmax(290px,1fr));gap:20px}
-.lc{background:#fff;border:1px solid var(--line);border-radius:14px;overflow:hidden;display:flex;flex-direction:column;box-shadow:0 2px 10px rgba(27,44,72,.06)}
+.lc{background:#fff;border:1px solid var(--line);border-radius:14px;overflow:hidden;display:flex;flex-direction:column;box-shadow:0 2px 10px rgba(22,54,42,.06)}
 .lph{position:relative;aspect-ratio:4/3;background:var(--sky)}
 .lph img{width:100%;height:100%;object-fit:cover;display:block}
 .lph .noimg{position:absolute;inset:0;display:grid;place-items:center;color:var(--sub);font-size:14px}
@@ -397,7 +397,7 @@ footer .cp{grid-column:1/-1;font-size:12px;opacity:.7;border-top:1px solid rgba(
 .wk p{margin:0;font-size:14px}
 /* 診断・計算 */
 .tools{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:20px}
-.tool{background:#fff;border-radius:16px;padding:24px;box-shadow:0 2px 12px rgba(27,44,72,.07)}
+.tool{background:#fff;border-radius:16px;padding:24px;box-shadow:0 2px 12px rgba(22,54,42,.07)}
 .tool h3{font-size:19px;margin-bottom:10px}
 .sstep{color:var(--blue);font-weight:700;font-size:13px;margin:0 0 6px}
 .sqt{font-family:var(--f-head);font-weight:700;color:var(--navy);font-size:18px;margin:0 0 12px}
@@ -413,17 +413,17 @@ footer .cp{grid-column:1/-1;font-size:12px;opacity:.7;border-top:1px solid rgba(
 .btn-b{background:var(--blue);color:#fff;box-shadow:0 4px 0 var(--blue-d)}
 /* ヒーロー写真 */
 .hero-photo{position:relative}
-.hero-photo img{width:100%;height:auto;aspect-ratio:16/9;object-fit:cover;border-radius:20px;box-shadow:0 18px 40px rgba(27,44,72,.18);display:block}
-.hero-photo span{position:absolute;background:#fff;color:var(--navy);font-weight:700;font-size:14px;border-radius:999px;padding:7px 14px;box-shadow:0 6px 16px rgba(27,44,72,.15)}
+.hero-photo img{width:100%;height:auto;aspect-ratio:16/9;object-fit:cover;border-radius:20px;box-shadow:0 18px 40px rgba(22,54,42,.18);display:block}
+.hero-photo span{position:absolute;background:#fff;color:var(--navy);font-weight:700;font-size:14px;border-radius:999px;padding:7px 14px;box-shadow:0 6px 16px rgba(22,54,42,.15)}
 .hero-photo .hb1{left:-10px;top:14%}.hero-photo .hb2{right:-8px;top:46%}.hero-photo .hb3{left:12%;bottom:-14px}
 @media (max-width:860px){.hero-photo{max-width:none;width:100%}.hero-photo .hb1{left:8px}.hero-photo .hb2{right:8px}}
 @media (max-width:420px){header .wrap{gap:8px}.logo b{font-size:16px}.htel b{font-size:15px}.htel small{display:none}}
 /* LINE 2つ */
 .line2{display:grid;grid-template-columns:1fr 1fr;gap:20px;max-width:900px;margin:0 auto}
-.l2c{background:#fff;border-radius:16px;padding:26px 24px;border-top:6px solid var(--blue);display:flex;flex-direction:column;align-items:flex-start;gap:10px;box-shadow:0 2px 12px rgba(27,44,72,.07)}
-.l2c.r{border-top-color:var(--orange)}
+.l2c{background:#fff;border-radius:16px;padding:26px 24px;border-top:6px solid var(--blue);display:flex;flex-direction:column;align-items:flex-start;gap:10px;box-shadow:0 2px 12px rgba(22,54,42,.07)}
+.l2c.r{border-top-color:#2b9bd3}
 .l2t{font-family:var(--f-head);font-weight:900;font-size:14px;color:#fff;background:var(--blue);border-radius:6px;padding:3px 14px}
-.l2c.r .l2t{background:var(--orange)}
+.l2c.r .l2t{background:#2b9bd3}
 .l2c h3{font-size:20px}.l2c p{margin:0;font-size:14.5px;color:var(--sub)}
 .l2c .btn{align-self:stretch;margin-top:6px}.l2c small{color:var(--sub);font-size:12px}
 @media (max-width:700px){.line2{grid-template-columns:1fr}}
@@ -431,7 +431,7 @@ footer .cp{grid-column:1/-1;font-size:12px;opacity:.7;border-top:1px solid rgba(
 .ltabs{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin:0 0 20px}
 .ltabs button{font:inherit;font-weight:700;font-size:14px;border:2px solid var(--sky2);background:#fff;color:var(--navy);border-radius:999px;padding:7px 16px;cursor:pointer}
 .ltabs button.on{background:var(--navy);border-color:var(--navy);color:#fff}
-.lc.msk .lph{background:linear-gradient(135deg,#1b2c48,#1f6fb8)}
+.lc.msk .lph{background:linear-gradient(135deg,#16362a,#078d3b)}
 .lph .noimg.lock{color:#fff;font-weight:700;font-size:14px;text-align:center;line-height:1.7}
 .lbtn{font-size:15px;padding:12px 18px}
 .modal{position:fixed;inset:0;background:rgba(15,25,40,.55);z-index:100;display:grid;place-items:center;padding:16px}
@@ -447,10 +447,10 @@ footer .cp{grid-column:1/-1;font-size:12px;opacity:.7;border-top:1px solid rgba(
 
 .rc .lbtn2{margin-top:8px;width:100%;justify-content:center}
 .rc .btn-line{width:100%;justify-content:center}
-.pcnt{position:absolute;right:10px;bottom:10px;background:rgba(27,44,72,.78);color:#fff;font-size:12px;border-radius:6px;padding:2px 8px}
+.pcnt{position:absolute;right:10px;bottom:10px;background:rgba(22,54,42,.78);color:#fff;font-size:12px;border-radius:6px;padding:2px 8px}
 .rtags{display:flex;flex-wrap:wrap;gap:6px;margin:6px 0 0}.rtags span{font-size:12px;background:#fff4e8;color:#b85a00;border-radius:999px;padding:2px 10px}
 .btn-ghost{background:#fff;color:var(--navy);border:2px solid var(--sky2)}
-.chintai-hero{background:linear-gradient(135deg,#fff4e8,#eaf4fb);padding:40px 0 28px}
+.chintai-hero{background:linear-gradient(135deg,#fff4e8,#eaf6ee);padding:40px 0 28px}
 .chintai-hero h1{font-size:clamp(26px,4.5vw,40px);margin:6px 0 10px;line-height:1.35}
 .chintai-hero p{margin:0 0 16px;color:var(--sub)}
 .cpts{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px;margin-top:18px}
@@ -478,7 +478,7 @@ footer .cp{grid-column:1/-1;font-size:12px;opacity:.7;border-top:1px solid rgba(
 .owwc button{position:absolute;right:8px;top:8px;border:0;background:none;font-size:20px;line-height:1;cursor:pointer;color:#666}
 .stats{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin:8px 0 18px}
 .stats>div{background:#fff;border:1px solid #dfe7f0;border-radius:12px;padding:18px 10px;text-align:center}
-.stats b{display:block;font-size:34px;color:var(--blue,#1d5fa8);line-height:1.1}
+.stats b{display:block;font-size:34px;color:var(--blue,#067a33);line-height:1.1}
 .stats small{font-size:15px;margin-left:2px}
 .stats span{font-size:13px;color:#556}
 .statgrid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:18px;align-items:start}
@@ -489,7 +489,7 @@ footer .cp{grid-column:1/-1;font-size:12px;opacity:.7;border-top:1px solid rgba(
 @media(max-width:640px){.stats b{font-size:26px}.statgrid{grid-template-columns:1fr}}
 .wks{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:12px;margin:8px 0 14px}
 .wk{background:#fff;border:1px solid #dfe7f0;border-radius:12px;padding:14px 16px}
-.wk-a{display:inline-block;background:#e8f1fb;color:#1d5fa8;font-size:12px;font-weight:700;padding:2px 10px;border-radius:99px;margin-bottom:6px}
+.wk-a{display:inline-block;background:#e8f5ec;color:#067a33;font-size:12px;font-weight:700;padding:2px 10px;border-radius:99px;margin-bottom:6px}
 .wk b{display:block;font-size:16px;margin-bottom:2px}
 .wk p{margin:0 0 6px;font-size:14px;color:#445}
 .wk small{color:#889;font-size:12px}
@@ -623,7 +623,7 @@ footer .cp{grid-column:1/-1;font-size:12px;opacity:.7;border-top:1px solid rgba(
 <section class="sec" id="works-sec">
   <div class="wrap">
     <div class="ttl"><span class="en">RESULTS</span><h2>最近の<span class="mk">成約実績</span></h2><p>ワンルームからご家族のお住まい、土地まで。福岡市内を中心に、さまざまな物件のお取引をお手伝いしています。</p></div>
-    <div class="wks"><div class="wk"><span class="wk-a">南区</span><b>中古マンション</b><p>約32㎡・築17年</p><small>2026年11月 成約</small></div><div class="wk"><span class="wk-a">中央区</span><b>中古マンション</b><p>約20㎡・築18年</p><small>2026年11月 成約</small></div><div class="wk"><span class="wk-a">早良区</span><b>中古マンション</b><p>築30年・ファミリー向け</p><small>2026年10月 成約</small></div><div class="wk"><span class="wk-a">城南区</span><b>中古マンション</b><p>約59㎡・ファミリー向け</p><small>2026年10月 成約</small></div><div class="wk"><span class="wk-a">城南区</span><b>土地（住宅用地）</b><p>住宅用地・城南区内</p><small>2026年10月 成約</small></div><div class="wk"><span class="wk-a">中央区</span><b>中古マンション</b><p>約35㎡・築8年</p><small>2026年10月 成約</small></div><div class="wk"><span class="wk-a">東区</span><b>中古マンション</b><p>約22㎡・築30年超</p><small>2026年9月 成約</small></div><div class="wk"><span class="wk-a">博多区</span><b>中古マンション</b><p>約22㎡・ワンルーム</p><small>2026年9月 成約</small></div><div class="wk"><span class="wk-a">中央区</span><b>中古マンション</b><p>約29㎡・築12年</p><small>2026年9月 成約</small></div><div class="wk"><span class="wk-a">中央区</span><b>中古マンション</b><p>約29㎡・築12年</p><small>2026年8月 成約</small></div><div class="wk"><span class="wk-a">東区</span><b>中古マンション（2戸）</b><p>約46㎡・築20年超</p><small>2026年8月 成約</small></div><div class="wk"><span class="wk-a">東京都</span><b>中古マンション</b><p>ワンルーム・県外物件</p><small>2026年7月 成約</small></div><div class="wk"><span class="wk-a">博多区</span><b>中古マンション</b><p>博多駅エリア・ワンルーム</p><small>2026年5月 成約</small></div></div>
+    <div class="wks"><div class="wk"><span class="wk-a">早良区</span><b>中古マンション</b><p>築30年・ファミリー向け</p><small>2026年10月 成約</small></div><div class="wk"><span class="wk-a">城南区</span><b>中古マンション</b><p>約59㎡・ファミリー向け</p><small>2026年10月 成約</small></div><div class="wk"><span class="wk-a">城南区</span><b>土地（住宅用地）</b><p>住宅用地・城南区内</p><small>2026年10月 成約</small></div><div class="wk"><span class="wk-a">中央区</span><b>中古マンション</b><p>約35㎡・築8年</p><small>2026年10月 成約</small></div><div class="wk"><span class="wk-a">東区</span><b>中古マンション</b><p>約22㎡・築30年超</p><small>2026年9月 成約</small></div><div class="wk"><span class="wk-a">博多区</span><b>中古マンション</b><p>約22㎡・ワンルーム</p><small>2026年9月 成約</small></div><div class="wk"><span class="wk-a">中央区</span><b>中古マンション</b><p>約29㎡・築12年</p><small>2026年9月 成約</small></div><div class="wk"><span class="wk-a">中央区</span><b>中古マンション</b><p>約29㎡・築12年</p><small>2026年8月 成約</small></div><div class="wk"><span class="wk-a">東区</span><b>中古マンション（2戸）</b><p>約46㎡・築20年超</p><small>2026年8月 成約</small></div><div class="wk"><span class="wk-a">東京都</span><b>中古マンション</b><p>ワンルーム・県外物件</p><small>2026年7月 成約</small></div><div class="wk"><span class="wk-a">博多区</span><b>中古マンション</b><p>博多駅エリア・ワンルーム</p><small>2026年5月 成約</small></div></div>
     <p class="note" style="text-align:center">※お客様が特定されないよう、エリア・広さ・築年数などは一部まるめて表記しています。</p>
     <div class="works" id="works"></div>
   </div>
@@ -674,15 +674,15 @@ footer .cp{grid-column:1/-1;font-size:12px;opacity:.7;border-top:1px solid rgba(
   <div class="wrap">
     <div class="ttl"><span class="en">WORRY</span><h2>こんな<span class="mk">お悩み</span>はありませんか？</h2><p>不動産の売却には、ご家庭ごとの事情があります。どんなご相談でも、まずはお話を聞かせてください。</p></div>
     <div class="worry">
-      <a class="w" href="#satei-sec"><svg viewBox="0 0 56 56"><circle cx="28" cy="28" r="28" fill="#eaf4fb"/><path d="M14 30 L28 18 L42 30 M18 28 V40 H38 V28" fill="none" stroke="#1f6fb8" stroke-width="3" stroke-linejoin="round"/><path d="M24 40 V32 H32 V40" fill="none" stroke="#ef7d1a" stroke-width="3"/></svg><div><b>住み替えたい</b><span>売るのと買うのを同時に進めたい</span></div></a>
-      <a class="w" href="#satei-sec"><svg viewBox="0 0 56 56"><circle cx="28" cy="28" r="28" fill="#eaf4fb"/><rect x="17" y="14" width="22" height="28" rx="2" fill="none" stroke="#1f6fb8" stroke-width="3"/><path d="M22 22 H34 M22 28 H34 M22 34 H29" stroke="#ef7d1a" stroke-width="3"/></svg><div><b>相続した家がある</b><span>手続きの順番が分からない</span></div></a>
-      <a class="w" href="#satei-sec"><svg viewBox="0 0 56 56"><circle cx="28" cy="28" r="28" fill="#eaf4fb"/><path d="M14 30 L28 18 L42 30 M18 28 V40 H38 V28" fill="none" stroke="#1f6fb8" stroke-width="3" stroke-linejoin="round"/><path d="M23 30 L33 38 M33 30 L23 38" stroke="#ef7d1a" stroke-width="3"/></svg><div><b>空き家になっている</b><span>管理が大変、遠方に住んでいる</span></div></a>
-      <a class="w" href="#satei-sec"><svg viewBox="0 0 56 56"><circle cx="28" cy="28" r="28" fill="#eaf4fb"/><circle cx="28" cy="28" r="12" fill="none" stroke="#1f6fb8" stroke-width="3"/><path d="M28 21 V28 L33 31" stroke="#ef7d1a" stroke-width="3" fill="none" stroke-linecap="round"/></svg><div><b>早めに現金化したい</b><span>時期が決まっている、急いでいる</span></div></a>
-      <a class="w" href="#satei-sec"><svg viewBox="0 0 56 56"><circle cx="28" cy="28" r="28" fill="#eaf4fb"/><rect x="14" y="20" width="28" height="18" rx="3" fill="none" stroke="#1f6fb8" stroke-width="3"/><circle cx="28" cy="29" r="4" fill="#ef7d1a"/></svg><div><b>ローンが残っている</b><span>売って完済できるか不安</span></div></a>
-      <a class="w" href="#satei-sec"><svg viewBox="0 0 56 56"><circle cx="28" cy="28" r="28" fill="#eaf4fb"/><rect x="18" y="14" width="20" height="28" rx="2" fill="none" stroke="#1f6fb8" stroke-width="3"/><g fill="#ef7d1a"><rect x="22" y="19" width="5" height="5"/><rect x="30" y="19" width="5" height="5"/><rect x="22" y="27" width="5" height="5"/><rect x="30" y="27" width="5" height="5"/></g></svg><div><b>投資用マンションを売りたい</b><span>入居者がいるまま売りたい</span></div></a>
-      <a class="w" href="#satei-sec"><svg viewBox="0 0 56 56"><circle cx="28" cy="28" r="28" fill="#eaf4fb"/><path d="M15 38 H41 M18 38 V24 L28 16 L38 24 V38" fill="none" stroke="#1f6fb8" stroke-width="3" stroke-linejoin="round"/><path d="M22 32 L34 26" stroke="#ef7d1a" stroke-width="3"/></svg><div><b>古い家・再建築が難しい土地</b><span>他社に断られた物件も</span></div></a>
-      <a class="w" href="#satei-sec"><svg viewBox="0 0 56 56"><circle cx="28" cy="28" r="28" fill="#eaf4fb"/><circle cx="22" cy="24" r="5" fill="none" stroke="#1f6fb8" stroke-width="3"/><circle cx="34" cy="24" r="5" fill="none" stroke="#1f6fb8" stroke-width="3"/><path d="M14 40 Q22 30 28 36 Q34 30 42 40" fill="none" stroke="#ef7d1a" stroke-width="3"/></svg><div><b>離婚・共有名義の整理</b><span>持ち分の分け方を相談したい</span></div></a>
-      <a class="w" href="#satei-sec"><svg viewBox="0 0 56 56"><circle cx="28" cy="28" r="28" fill="#eaf4fb"/><circle cx="25" cy="25" r="9" fill="none" stroke="#1f6fb8" stroke-width="3"/><path d="M32 32 L41 41" stroke="#ef7d1a" stroke-width="4" stroke-linecap="round"/></svg><div><b>今の価格だけ知りたい</b><span>売るかどうかはまだ決めていない</span></div></a>
+      <a class="w" href="#satei-sec"><svg viewBox="0 0 56 56"><circle cx="28" cy="28" r="28" fill="#eaf6ee"/><path d="M14 30 L28 18 L42 30 M18 28 V40 H38 V28" fill="none" stroke="#078d3b" stroke-width="3" stroke-linejoin="round"/><path d="M24 40 V32 H32 V40" fill="none" stroke="#ef7d1a" stroke-width="3"/></svg><div><b>住み替えたい</b><span>売るのと買うのを同時に進めたい</span></div></a>
+      <a class="w" href="#satei-sec"><svg viewBox="0 0 56 56"><circle cx="28" cy="28" r="28" fill="#eaf6ee"/><rect x="17" y="14" width="22" height="28" rx="2" fill="none" stroke="#078d3b" stroke-width="3"/><path d="M22 22 H34 M22 28 H34 M22 34 H29" stroke="#ef7d1a" stroke-width="3"/></svg><div><b>相続した家がある</b><span>手続きの順番が分からない</span></div></a>
+      <a class="w" href="#satei-sec"><svg viewBox="0 0 56 56"><circle cx="28" cy="28" r="28" fill="#eaf6ee"/><path d="M14 30 L28 18 L42 30 M18 28 V40 H38 V28" fill="none" stroke="#078d3b" stroke-width="3" stroke-linejoin="round"/><path d="M23 30 L33 38 M33 30 L23 38" stroke="#ef7d1a" stroke-width="3"/></svg><div><b>空き家になっている</b><span>管理が大変、遠方に住んでいる</span></div></a>
+      <a class="w" href="#satei-sec"><svg viewBox="0 0 56 56"><circle cx="28" cy="28" r="28" fill="#eaf6ee"/><circle cx="28" cy="28" r="12" fill="none" stroke="#078d3b" stroke-width="3"/><path d="M28 21 V28 L33 31" stroke="#ef7d1a" stroke-width="3" fill="none" stroke-linecap="round"/></svg><div><b>早めに現金化したい</b><span>時期が決まっている、急いでいる</span></div></a>
+      <a class="w" href="#satei-sec"><svg viewBox="0 0 56 56"><circle cx="28" cy="28" r="28" fill="#eaf6ee"/><rect x="14" y="20" width="28" height="18" rx="3" fill="none" stroke="#078d3b" stroke-width="3"/><circle cx="28" cy="29" r="4" fill="#ef7d1a"/></svg><div><b>ローンが残っている</b><span>売って完済できるか不安</span></div></a>
+      <a class="w" href="#satei-sec"><svg viewBox="0 0 56 56"><circle cx="28" cy="28" r="28" fill="#eaf6ee"/><rect x="18" y="14" width="20" height="28" rx="2" fill="none" stroke="#078d3b" stroke-width="3"/><g fill="#ef7d1a"><rect x="22" y="19" width="5" height="5"/><rect x="30" y="19" width="5" height="5"/><rect x="22" y="27" width="5" height="5"/><rect x="30" y="27" width="5" height="5"/></g></svg><div><b>投資用マンションを売りたい</b><span>入居者がいるまま売りたい</span></div></a>
+      <a class="w" href="#satei-sec"><svg viewBox="0 0 56 56"><circle cx="28" cy="28" r="28" fill="#eaf6ee"/><path d="M15 38 H41 M18 38 V24 L28 16 L38 24 V38" fill="none" stroke="#078d3b" stroke-width="3" stroke-linejoin="round"/><path d="M22 32 L34 26" stroke="#ef7d1a" stroke-width="3"/></svg><div><b>古い家・再建築が難しい土地</b><span>他社に断られた物件も</span></div></a>
+      <a class="w" href="#satei-sec"><svg viewBox="0 0 56 56"><circle cx="28" cy="28" r="28" fill="#eaf6ee"/><circle cx="22" cy="24" r="5" fill="none" stroke="#078d3b" stroke-width="3"/><circle cx="34" cy="24" r="5" fill="none" stroke="#078d3b" stroke-width="3"/><path d="M14 40 Q22 30 28 36 Q34 30 42 40" fill="none" stroke="#ef7d1a" stroke-width="3"/></svg><div><b>離婚・共有名義の整理</b><span>持ち分の分け方を相談したい</span></div></a>
+      <a class="w" href="#satei-sec"><svg viewBox="0 0 56 56"><circle cx="28" cy="28" r="28" fill="#eaf6ee"/><circle cx="25" cy="25" r="9" fill="none" stroke="#078d3b" stroke-width="3"/><path d="M32 32 L41 41" stroke="#ef7d1a" stroke-width="4" stroke-linecap="round"/></svg><div><b>今の価格だけ知りたい</b><span>売るかどうかはまだ決めていない</span></div></a>
     </div>
   </div>
 </section>
@@ -712,15 +712,15 @@ footer .cp{grid-column:1/-1;font-size:12px;opacity:.7;border-top:1px solid rgba(
     <div class="ttl"><span class="en">REASON</span><h2>OLD wideが<span class="mk">選ばれる理由</span></h2></div>
     <div class="rs">
       <div class="r">
-        <div class="ri"><svg viewBox="0 0 120 90"><circle cx="60" cy="32" r="16" fill="#fff" stroke="#1b2c48" stroke-width="3"/><path d="M30 86 Q30 54 60 54 Q90 54 90 86" fill="#1f6fb8" stroke="#1b2c48" stroke-width="3"/><path d="M54 56 L60 70 L66 56" fill="#fff" stroke="#1b2c48" stroke-width="2"/></svg></div>
+        <div class="ri"><svg viewBox="0 0 120 90"><circle cx="60" cy="32" r="16" fill="#fff" stroke="#16362a" stroke-width="3"/><path d="M30 86 Q30 54 60 54 Q90 54 90 86" fill="#078d3b" stroke="#16362a" stroke-width="3"/><path d="M54 56 L60 70 L66 56" fill="#fff" stroke="#16362a" stroke-width="2"/></svg></div>
         <div><span class="no">理由 1</span><h3>最初から最後まで、同じ担当者が責任を持ちます</h3><p>大手の会社では、査定する人と販売する人が変わることがよくあります。OLD wideでは最初にご相談を受けた担当者（代表の古財または佐伯）が引渡しまでずっと窓口になるので、お話しいただいたことを何度も説明し直す必要がありません。</p></div>
       </div>
       <div class="r">
-        <div class="ri"><svg viewBox="0 0 120 90"><rect x="34" y="10" width="52" height="70" rx="4" fill="#fff" stroke="#1b2c48" stroke-width="3"/><path d="M44 26 H76 M44 36 H76 M44 46 H66" stroke="#1f6fb8" stroke-width="3"/><circle cx="72" cy="64" r="10" fill="none" stroke="#ef7d1a" stroke-width="3"/></svg></div>
+        <div class="ri"><svg viewBox="0 0 120 90"><rect x="34" y="10" width="52" height="70" rx="4" fill="#fff" stroke="#16362a" stroke-width="3"/><path d="M44 26 H76 M44 36 H76 M44 46 H66" stroke="#078d3b" stroke-width="3"/><circle cx="72" cy="64" r="10" fill="none" stroke="#ef7d1a" stroke-width="3"/></svg></div>
         <div><span class="no">理由 2</span><h3>査定額の理由を、きちんと書面でお渡しします</h3><p>近くで実際に売れた事例、土地の値段の動き、建物の状態などをまとめた査定報告書をお作りします。「なぜこの価格なのか」が分かるので、他社の査定と比べて納得してから決められます。</p></div>
       </div>
       <div class="r">
-        <div class="ri"><svg viewBox="0 0 120 90"><path d="M16 50 L36 34 L56 50 V78 H16Z" fill="#fff" stroke="#1b2c48" stroke-width="3" stroke-linejoin="round"/><path d="M64 50 L84 34 L104 50 V78 H64Z" fill="#eaf4fb" stroke="#1b2c48" stroke-width="3" stroke-linejoin="round"/><path d="M48 22 Q60 10 72 22" fill="none" stroke="#ef7d1a" stroke-width="3"/><path d="M68 18 L72 22 L67 25" fill="none" stroke="#ef7d1a" stroke-width="3"/></svg></div>
+        <div class="ri"><svg viewBox="0 0 120 90"><path d="M16 50 L36 34 L56 50 V78 H16Z" fill="#fff" stroke="#16362a" stroke-width="3" stroke-linejoin="round"/><path d="M64 50 L84 34 L104 50 V78 H64Z" fill="#eaf6ee" stroke="#16362a" stroke-width="3" stroke-linejoin="round"/><path d="M48 22 Q60 10 72 22" fill="none" stroke="#ef7d1a" stroke-width="3"/><path d="M68 18 L72 22 L67 25" fill="none" stroke="#ef7d1a" stroke-width="3"/></svg></div>
         <div><span class="no">理由 3</span><h3>売ったあとの住まい探しも、まとめてお任せ</h3><p>OLD wideは売買も賃貸も扱っています。今の家を売りながら、次に住む家の購入や賃貸のお部屋探しも同時に進められるので、引越しの段取りがぐっと楽になります。</p></div>
       </div>
     </div>
